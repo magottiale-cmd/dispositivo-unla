@@ -9,11 +9,12 @@
         body { font-family: 'Segoe UI', sans-serif; line-height: 1.7; color: #2c3e50; max-width: 950px; margin: 0 auto; padding: 20px; background-color: #fdfdfd; }
         header { background: linear-gradient(135deg, var(--unla-blue), #002d5a); color: white; padding: 40px; text-align: center; border-radius: 15px; margin-bottom: 30px; }
         .nav-links { margin-top: 20px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
-        .nav-links a { color: white; text-decoration: none; font-weight: bold; padding: 8px 12px; border-radius: 6px; border: 1px solid white; font-size: 0.85em; }
+        .nav-links a { color: white; text-decoration: none; font-weight: bold; padding: 8px 12px; border-radius: 6px; border: 1px solid white; font-size: 0.85em; transition: 0.3s; }
         .card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 25px; border-left: 6px solid var(--unla-blue); }
         .badge { background: var(--health-green); color: white; padding: 5px 12px; border-radius: 20px; font-size: 0.85em; display: inline-block; margin-bottom: 10px; }
         .territorio-box { background-color: #e3f2fd; border-left: 6px solid var(--bonaparte-color); padding: 15px; border-radius: 8px; margin-bottom: 20px; }
-        .consentimiento-box { background-color: #f8f9fa; border: 1px solid #dee2e6; padding: 20px; border-radius: 8px; margin: 20px 0; }
+        .btn-registro { display: block; background: #28a745; color: white; text-align: center; padding: 25px; border-radius: 15px; text-decoration: none; font-weight: bold; font-size: 1.3em; box-shadow: 0 4px 10px rgba(0,0,0,0.2); transition: 0.3s; }
+        .btn-registro:hover { background: #218838; transform: translateY(-3px); }
     </style>
 </head>
 <body>
@@ -28,7 +29,7 @@
     </header>
 
     <section class="card">
-        <div class="badge">Inserción Territorial y Profesional</div>
+        <div class="badge">Trayectoria e Inserción Territorial</div>
         <h2>UPA 1 Lomas de Zamora & RISAM</h2>
         <div class="territorio-box">
             <p><strong>Lugar de Trabajo Actual:</strong> UPA 1 - Lomas de Zamora (Villa Fiorito). Sede operativa de la Tesis de Maestría.</p>
@@ -36,50 +37,29 @@
         </div>
         <ul>
             <li>Miembro del Consejo Departamental de Graduados - UNLa.</li>
-            <li>Licenciado en Enfermería.</li>
-            <li>Especialista en Salud Mental y Psiquiatría (RISAM).</li>
+            <li>Licenciado en Enfermería / Especialista en Salud Mental.</li>
         </ul>
     </section>
 
     <section class="card">
-        <h2>Proyecto de Tesis (Marzo 2026 - 2028)</h2>
-        <p>Sistematización de datos territoriales en la UPA 1 para fortalecer las políticas públicas de salud mental comunitaria.</p>
+        <h2>Fundamentos y Marco Legal (Ley 26.657)</h2>
+        <p>Este dispositivo promueve la clínica de lo común, la interdisciplina y el abordaje comunitario basado en derechos humanos.</p>
+        <a href="consentimiento-informado.pdf" target="_blank" style="color: var(--unla-blue); font-weight: bold;">Acceder al Consentimiento Informado (PDF)</a>
     </section>
 
     <section class="card">
-        <h2>Fundamentos Ético-Políticos (Ley 26.657)</h2>
-        <ul>
-            <li><strong>Abordaje Comunitario:</strong> Sustitución de lógicas de aislamiento.</li>
-            <li><strong>Interdisciplina:</strong> Integración de saberes.</li>
-            <li><strong>Derechos Humanos:</strong> Presunción de capacidad.</li>
-        </ul>
-    </section>
-
-    <section class="card">
+        <div class="badge" style="background: #007bff;">Operatividad de Campo</div>
         <h2>Registro de Intervención Territorial</h2>
-        <div class="consentimiento-box">
-            <p><strong>Consentimiento Informado:</strong> Datos con fines académicos (Maestría UNLa).</p>
-            <a href="consentimiento-informado.pdf" target="_blank">Leer PDF Ético</a>
-            <br><br>
-            <label style="cursor:pointer;"><input type="checkbox" required> He leído y acepto los términos.</label>
-        </div>
-
-        <!-- AQUÍ ESTÁ EL ERROR CORREGIDO: SE AGREGÓ /f/maqdqjol -->
-        <form action="https://formspree.io" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
-            <input type="email" name="email" placeholder="Tu Email" required style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc;">
-            <select name="dispositivo" required style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc; background: white;">
-                <option>UPA 1 Lomas de Zamora (Fiorito)</option>
-                <option>Hospital Lic. Laura Bonaparte</option>
-            </select>
-            <textarea name="message" rows="5" placeholder="Crónica de la intervención..." required style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc;"></textarea>
-            <button type="submit" style="background-color: var(--health-green); color: white; border: none; padding: 15px; border-radius: 8px; font-weight: bold; cursor: pointer;">
-                Guardar y Firmar Registro
-            </button>
-        </form>
+        <p>Haga clic en el botón inferior para abrir el sistema de carga de datos para la tesis.</p>
+        
+        <!-- LINK TEMPORAL PROFESIONAL -->
+        <a href="https://www.unla.edu.ar" target="_blank" class="btn-registro">
+            📝 INICIAR REGISTRO DE INTERVENCIÓN
+        </a>
     </section>
 
     <footer style="text-align: center; color: #888; font-size: 0.85em; margin-top: 50px; padding: 20px; border-top: 1px solid #eee;">
-        Alejandro Magotti © 2026 | UPA 1 Lomas de Zamora - RISAM Bonaparte - UNLa
+        Alejandro Magotti © 2026 | UNLa - Lomas de Zamora - RISAM
     </footer>
 </body>
 </html>
