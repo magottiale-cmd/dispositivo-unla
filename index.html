@@ -16,6 +16,7 @@
         .territorio-box { background-color: #e3f2fd; border-left: 6px solid var(--bonaparte-color); padding: 15px; border-radius: 8px; margin-bottom: 20px; }
         .consentimiento-box { background-color: #f8f9fa; border: 1px solid #dee2e6; padding: 20px; border-radius: 8px; margin: 20px 0; }
         .btn-pdf { color: var(--unla-blue); font-weight: bold; text-decoration: underline; display: inline-block; margin: 10px 0; }
+        .map-container { margin-top: 20px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border: 2px solid #ddd; }
     </style>
 </head>
 <body>
@@ -31,16 +32,24 @@
     </header>
 
     <section class="card">
-        <div class="badge">Trayectoria Institucional</div>
-        <h2>Inserción Territorial y Profesional</h2>
+        <div class="badge">Trayectoria e Inserción Territorial</div>
+        <h2>UPA 1 Lomas de Zamora & RISAM</h2>
         <div class="territorio-box">
-            <p><strong>Lugar de Trabajo:</strong> UPA 1 - Lomas de Zamora (Fiorito). Sede del trabajo de campo para la Tesis de Maestría.</p>
+            <p><strong>Lugar de Trabajo Actual:</strong> UPA 1 - Lomas de Zamora (Fiorito). Sede del trabajo de campo para la Tesis de Maestría.</p>
             <p><strong>Formación:</strong> Última rotación externa de la RISAM - Hospital Lic. Laura Bonaparte.</p>
         </div>
         <ul>
             <li>Miembro del Consejo Departamental de Graduados - UNLa.</li>
             <li>Licenciado en Enfermería.</li>
         </ul>
+
+        <!-- MAPA INTERACTIVO DE LA UPA 1 -->
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com" 
+                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
     </section>
 
     <section class="card">
