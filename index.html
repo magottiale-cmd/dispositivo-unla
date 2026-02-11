@@ -21,10 +21,10 @@
         
         .bibliografia-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin-top: 20px; }
         .autor-box { background: #fdfdfd; padding: 15px; border-radius: 12px; border: 1px solid #eee; transition: 0.3s; }
-        .autor-box:hover { transform: translateY(-3px); box-shadow: 0 5px 10px rgba(0,0,0,0.05); }
         .autor-box a { color: #d9534f; text-decoration: none; font-weight: bold; display: block; margin-top: 5px; }
         
-        .btn-registro { display: block; background: var(--health-green); color: white; text-align: center; padding: 25px; border-radius: 15px; text-decoration: none; font-weight: bold; font-size: 1.5em; box-shadow: 0 8px 15px rgba(40, 167, 69, 0.4); transition: 0.4s; margin-top: 30px; border: none; }
+        .consentimiento-container { background: #f8f9fa; border: 1px dashed var(--unla-blue); padding: 20px; border-radius: 12px; text-align: center; margin-bottom: 20px; }
+        .btn-registro { display: block; background: var(--health-green); color: white; text-align: center; padding: 25px; border-radius: 15px; text-decoration: none; font-weight: bold; font-size: 1.5em; box-shadow: 0 8px 15px rgba(40, 167, 69, 0.4); transition: 0.4s; border: none; }
         .btn-registro:hover { background: #218838; transform: scale(1.02); }
         
         footer { text-align: center; color: #7f8c8d; padding: 40px 20px; border-top: 1px solid #ddd; margin-top: 50px; }
@@ -61,12 +61,10 @@
             <li><strong>Derechos Humanos:</strong> Presunción de capacidad y atención en el lazo social.</li>
             <li><strong>Interdisciplina:</strong> Registro plural de saberes (Enfermería, Psicología, TS, Psiquiatría).</li>
         </ul>
-        <a href="consentimiento-informado.pdf" target="_blank" style="color: var(--unla-blue); font-weight: bold; text-decoration: underline;">📄 Leer Consentimiento Informado (PDF)</a>
     </section>
 
     <section class="card">
         <h2>Biblioteca de Referencia</h2>
-        <p>Acceso a textos fundamentales para la práctica territorial:</p>
         <div class="bibliografia-grid">
             <div class="autor-box">
                 <strong>Emiliano Galende</strong>
@@ -83,13 +81,22 @@
         </div>
     </section>
 
-    <section class="card">
+    <section class="card" style="border-left-color: var(--health-green);">
         <div class="badge" style="background: #007bff;">Operatividad</div>
         <h2>Registro de Intervención Territorial</h2>
-        <p>Utilice el botón inferior para iniciar la carga de datos en el sistema oficial de Google Forms:</p>
         
-        <!-- LINK VERIFICADO Y CORREGIDO -->
-        <a href="https://docs.google.com" target="_blank" class="btn-registro">
+        <!-- REUBICACIÓN DEL CONSENTIMIENTO -->
+        <div class="consentimiento-container">
+            <p style="margin-bottom: 10px;"><strong>Paso 1:</strong> Es obligatorio leer y aceptar el marco ético antes de registrar datos.</p>
+            <a href="consentimiento-informado.pdf" target="_blank" style="color: var(--unla-blue); font-weight: bold; text-decoration: underline; font-size: 1.1em;">
+                📄 LEER CONSENTIMIENTO INFORMADO (PDF)
+            </a>
+        </div>
+
+        <p style="text-align: center; margin-bottom: 15px;"><strong>Paso 2:</strong> Una vez aceptado, inicie la carga de la crónica territorial:</p>
+        
+        <!-- LINK VERIFICADO Y SOLDADO AL BOTÓN -->
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfSI1Digm9h13CZq3j7UVg039CB_spQ4nQjWNsQkp8CeIZdEg/viewform" target="_blank" class="btn-registro">
             📝 INICIAR CARGA EN GOOGLE FORMS
         </a>
     </section>
