@@ -6,16 +6,16 @@
     <title>Alejandro Magotti - Salud Mental UNLa / RISAM</title>
     <style>
         :root { --unla-blue: #004a99; --bonaparte-color: #00a1e4; --health-green: #28a745; --lomas-maroon: #800000; }
-        body { font-family: 'Segoe UI', Tahoma, sans-serif; line-height: 1.7; color: #2c3e50; max-width: 950px; margin: 0 auto; padding: 20px; background-color: #fdfdfd; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; line-height: 1.7; color: #2c3e50; max-width: 900px; margin: 0 auto; padding: 20px; background-color: #fdfdfd; }
         header { background: linear-gradient(135deg, var(--unla-blue), #002d5a); color: white; padding: 40px; text-align: center; border-radius: 15px; margin-bottom: 30px; }
         .nav-links { margin-top: 20px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
         .nav-links a { color: white; text-decoration: none; font-weight: bold; padding: 8px 12px; border-radius: 6px; border: 1px solid white; font-size: 0.85em; transition: 0.3s; }
+        .nav-links a:hover { background: white; color: var(--unla-blue); }
         .card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 25px; border-left: 6px solid var(--unla-blue); }
         .badge { background: var(--health-green); color: white; padding: 5px 12px; border-radius: 20px; font-size: 0.85em; display: inline-block; margin-bottom: 10px; }
         .territorio-box { background-color: #e3f2fd; border-left: 6px solid var(--bonaparte-color); padding: 15px; border-radius: 8px; margin-bottom: 20px; }
         .consentimiento-box { background-color: #f8f9fa; border: 1px solid #dee2e6; padding: 20px; border-radius: 8px; margin: 20px 0; }
-        .btn-mapa { display: block; background-color: #4285F4; color: white; padding: 15px; text-decoration: none; border-radius: 12px; font-weight: bold; text-align: center; margin-top: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        .img-mapa { width: 100%; border-radius: 12px; border: 2px solid #ddd; margin-top: 15px; cursor: pointer; }
+        .btn-pdf { color: var(--unla-blue); font-weight: bold; text-decoration: underline; display: inline-block; margin: 10px 0; }
     </style>
 </head>
 <body>
@@ -35,48 +35,62 @@
         <h2>UPA 1 Lomas de Zamora & RISAM</h2>
         <div class="territorio-box">
             <p><strong>Lugar de Trabajo Actual:</strong> UPA 1 - Lomas de Zamora (Villa Fiorito). Sede operativa de la Tesis de Maestría.</p>
-            <p><strong>Formación:</strong> Última rotación externa de la RISAM - Hospital Lic. Laura Bonaparte.</p>
+            <p><strong>Formación:</strong> Última rotación externa de la Residencia Interdisciplinaria de Salud Mental (RISAM) - Hospital Lic. Laura Bonaparte.</p>
         </div>
-        
-        <!-- MAPA SEGURO: Imagen con Link Directo -->
-        <a href="https://www.google.com" target="_blank">
-            <img src="https://static-maps.yandex.ru" class="img-mapa" alt="Mapa UPA 1">
-            <div class="btn-mapa">📍 Abrir Navegación GPS hacia UPA 1</div>
-        </a>
+        <ul>
+            <li>Miembro del Consejo Departamental de Graduados - UNLa.</li>
+            <li>Licenciado en Enfermería.</li>
+            <li>Especialista en Salud Mental y Psiquiatría (Finalización: Octubre 2026).</li>
+        </ul>
     </section>
 
     <section class="card">
         <h2>Proyecto de Tesis (Marzo 2026 - 2028)</h2>
-        <p>Sistematización de datos territoriales en la UPA 1 para fortalecer las políticas públicas de salud mental comunitaria.</p>
+        <p>El objetivo central es la <strong>sistematización de datos territoriales en la UPA 1</strong> para la producción de estadísticas locales que fundamenten decisiones políticas de salud mental comunitaria.</p>
+        <p><em>Duración estimada de formación e investigación: 2 años y medio.</em></p>
     </section>
 
     <section class="card">
         <h2>Fundamentos Ético-Políticos (Ley 26.657)</h2>
+        <p>Este dispositivo digital se rige bajo los principios de la Ley Nacional de Salud Mental:</p>
         <ul>
-            <li><strong>Abordaje Comunitario:</strong> Sustitución de lógicas de aislamiento.</li>
-            <li><strong>Interdisciplina:</strong> Integración de saberes.</li>
-            <li><strong>Derechos Humanos:</strong> Derecho a la atención en el lazo social.</li>
+            <li><strong>Abordaje Comunitario:</strong> Sustitución definitiva de las lógicas de aislamiento.</li>
+            <li><strong>Interdisciplina:</strong> Integración de saberes para una clínica de lo común.</li>
+            <li><strong>Derechos Humanos:</strong> Presunción de capacidad y derecho a la atención en el lazo social.</li>
         </ul>
     </section>
 
     <section class="card">
         <div class="badge" style="background: #007bff;">Operatividad de Campo</div>
         <h2>Registro de Intervención Territorial</h2>
+        
         <div class="consentimiento-box">
             <p><strong>Consentimiento Informado:</strong> Datos con fines académicos para la Maestría UNLa.</p>
-            <a href="consentimiento-informado.pdf" target="_blank" style="color: var(--unla-blue); font-weight: bold; text-decoration: underline;">Leer PDF Ético</a>
+            <a href="consentimiento-informado.pdf" target="_blank" class="btn-pdf">Leer Consentimiento Informado (PDF)</a>
             <br><br>
-            <label><input type="checkbox" required> He leído y acepto los términos.</label>
+            <label style="cursor:pointer;"><input type="checkbox" required> He leído y acepto los términos para iniciar el registro.</label>
         </div>
 
         <form action="https://formspree.io" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
-            <input type="email" name="email" placeholder="Tu Email" required style="padding: 10px; border-radius: 8px; border: 1px solid #ccc;">
-            <select name="dispositivo" required style="padding: 10px; border-radius: 8px; border: 1px solid #ccc;">
-                <option>UPA 1 Lomas de Zamora (Fiorito)</option>
-                <option>Hospital Lic. Laura Bonaparte</option>
-            </select>
-            <textarea name="message" rows="5" placeholder="Crónica de intervención..." required style="padding: 10px; border-radius: 8px; border: 1px solid #ccc;"></textarea>
-            <button type="submit" style="background-color: var(--health-green); color: white; border: none; padding: 15px; border-radius: 8px; font-weight: bold; cursor: pointer;">Guardar Registro</button>
+            <div>
+                <label style="display: block; font-weight: bold;">Tu Email Institucional:</label>
+                <input type="email" name="email" required style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc;">
+            </div>
+            <div>
+                <label style="display: block; font-weight: bold;">Dispositivo de Intervención:</label>
+                <select name="dispositivo" required style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc; background: white;">
+                    <option>UPA 1 Lomas de Zamora (Fiorito)</option>
+                    <option>Hospital Lic. Laura Bonaparte</option>
+                    <option>Otro Dispositivo de la Red</option>
+                </select>
+            </div>
+            <div>
+                <label style="display: block; font-weight: bold;">Crónica de la Intervención:</label>
+                <textarea name="message" rows="5" placeholder="Escriba aquí la crónica para la base de datos de tesis..." required style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc;"></textarea>
+            </div>
+            <button type="submit" style="background-color: var(--health-green); color: white; border: none; padding: 15px; border-radius: 8px; font-weight: bold; cursor: pointer;">
+                Guardar y Firmar Registro
+            </button>
         </form>
     </section>
 
