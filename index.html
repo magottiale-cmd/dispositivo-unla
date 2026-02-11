@@ -3,18 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alejandro Magotti - Dispositivo de Investigación UNLa</title>
+    <title>Alejandro Magotti - Dispositivo UNLa / RISAM</title>
     <style>
         :root { --unla-blue: #004a99; --health-green: #28a745; --bonaparte-blue: #00a1e4; --lomas-maroon: #800000; }
         body { font-family: 'Segoe UI', Tahoma, sans-serif; line-height: 1.7; color: #2c3e50; max-width: 1000px; margin: 0 auto; padding: 20px; background-color: #f4f7f9; }
-        header { background: linear-gradient(135deg, var(--unla-blue), #002d5a); color: white; padding: 60px 20px; text-align: center; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+        
+        header { background: linear-gradient(135deg, var(--unla-blue), #002d5a); color: white; padding: 50px 20px; text-align: center; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+        .nav-links { margin-top: 20px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+        .nav-links a { color: white; text-decoration: none; font-weight: bold; padding: 8px 15px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.4); font-size: 0.85em; transition: 0.3s; }
+        .nav-links a:hover { background: white; color: var(--unla-blue); }
+
         .card { background: white; padding: 35px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); margin-bottom: 30px; border-left: 10px solid var(--unla-blue); }
         .badge { background: var(--health-green); color: white; padding: 6px 15px; border-radius: 20px; font-size: 0.9em; display: inline-block; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
+        
         .territorio-box { background-color: #e3f2fd; border-left: 6px solid var(--bonaparte-blue); padding: 20px; border-radius: 10px; margin: 20px 0; }
-        .ley-mental { background-color: #fff3cd; border-left: 6px solid #ffc107; padding: 20px; border-radius: 10px; font-style: italic; }
-        .autor-box { background: #fdfdfd; padding: 15px; border-radius: 12px; border: 1px solid #eee; margin-bottom: 10px; }
-        .btn-registro { display: block; background: var(--health-green); color: white; text-align: center; padding: 25px; border-radius: 15px; text-decoration: none; font-weight: bold; font-size: 1.5em; box-shadow: 0 8px 15px rgba(40, 167, 69, 0.4); transition: 0.4s; margin-top: 30px; }
+        .ley-mental { background-color: #fff3cd; border-left: 6px solid #ffc107; padding: 20px; border-radius: 10px; font-style: italic; margin-bottom: 20px; }
+        
+        .bibliografia-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin-top: 20px; }
+        .autor-box { background: #fdfdfd; padding: 15px; border-radius: 12px; border: 1px solid #eee; transition: 0.3s; }
+        .autor-box:hover { transform: translateY(-3px); box-shadow: 0 5px 10px rgba(0,0,0,0.05); }
+        .autor-box a { color: #d9534f; text-decoration: none; font-weight: bold; display: block; margin-top: 5px; }
+        
+        .btn-registro { display: block; background: var(--health-green); color: white; text-align: center; padding: 25px; border-radius: 15px; text-decoration: none; font-weight: bold; font-size: 1.5em; box-shadow: 0 8px 15px rgba(40, 167, 69, 0.4); transition: 0.4s; margin-top: 30px; border: none; }
         .btn-registro:hover { background: #218838; transform: scale(1.02); }
+        
+        footer { text-align: center; color: #7f8c8d; padding: 40px 20px; border-top: 1px solid #ddd; margin-top: 50px; }
     </style>
 </head>
 <body>
@@ -22,60 +35,67 @@
     <header>
         <h1>Lic. Alejandro Magotti</h1>
         <p>Especialista en Salud Mental y Psiquiatría (RISAM) | Maestrando UNLa</p>
-        <p><em>Sistematización de Intervenciones Territoriales para la Toma de Decisiones en Políticas Públicas</em></p>
+        <nav class="nav-links">
+            <a href="https://www.unla.edu.ar" target="_blank">Portal UNLa</a>
+            <a href="https://hospitalbonaparte.gob.ar" target="_blank" style="background: var(--bonaparte-blue); border: none;">Hosp. Laura Bonaparte</a>
+            <a href="https://www.lomasdezamora.gov.ar" target="_blank" style="background: var(--lomas-maroon); border: none;">Lomas de Zamora</a>
+        </nav>
     </header>
 
     <section class="card">
-        <div class="badge">Introducción al Proyecto</div>
-        <h2>¿Por qué este proyecto de investigación?</h2>
-        <p>En el marco de la <strong>Maestría en Salud Mental Comunitaria (UNLa)</strong> y la residencia <strong>RISAM del Hospital Lic. Laura Bonaparte</strong>, surge la necesidad de crear una herramienta digital que permita la sistematización técnica de las intervenciones en el territorio.</p>
-        <p>La falta de registros unificados en dispositivos de base comunitaria dificulta la producción de estadísticas locales. Este proyecto busca transformar la "crónica narrativa" en <strong>datos procesables</strong> para fundamentar decisiones políticas sanitarias que mejoren la red de cuidados en el Conurbano Sur.</p>
-    </section>
-
-    <section class="card">
-        <h2>Marco Institucional y Territorial</h2>
+        <div class="badge">Fundamentación de la Tesis</div>
+        <h2>Sistematización de Intervenciones Territoriales</h2>
+        <p>En el marco de la <strong>Maestría en Salud Mental Comunitaria (UNLa)</strong> y la residencia <strong>RISAM del Hospital Bonaparte</strong>, este proyecto busca transformar la crónica narrativa en datos procesables para fundamentar decisiones políticas sanitarias en el Conurbano Sur.</p>
         <div class="territorio-box">
-            <p><strong>Lugar de Trabajo y Campo de Tesis:</strong> UPA 1 - Lomas de Zamora (Villa Fiorito).</p>
-            <p><strong>Instituciones Articuladas:</strong> Universidad Nacional de Lanús (Departamento de Salud Comunitaria) y Hospital Nacional Lic. Laura Bonaparte.</p>
+            <p><strong>Campo de Investigación:</strong> UPA 1 - Lomas de Zamora (Villa Fiorito).</p>
+            <p><strong>Objetivo:</strong> Producción de estadísticas locales para el fortalecimiento de la red de cuidados.</p>
         </div>
-        <ul>
-            <li><strong>Población:</strong> Usuarios del sistema de salud en contextos de vulnerabilidad socio-sanitaria.</li>
-            <li><strong>Dispositivo:</strong> Abordaje territorial interdisciplinario.</li>
-        </ul>
     </section>
 
     <section class="card">
-        <h2>Fundamentación Ética: Ley Nacional 26.657</h2>
+        <h2>Marco Ético-Político (Ley 26.657)</h2>
         <div class="ley-mental">
-            <p>"La Salud Mental es un proceso determinado por componentes históricos, socioeconómicos, culturales, biológicos y psicológicos, cuya preservación y mejoramiento implica una dinámica de construcción social vinculada a la concreción de los derechos humanos y sociales de toda persona." (Art. 3)</p>
+            <p>"La Salud Mental es un proceso determinado por componentes históricos, socioeconómicos, culturales, biológicos y psicológicos..." (Art. 3)</p>
         </div>
-        <p>Este registro digital garantiza:</p>
         <ul>
-            <li><strong>Anonimato:</strong> Protección de datos personales (Ley 25.326).</li>
-            <li><strong>Interdisciplina:</strong> Registro plural de saberes (Enfermería, Psicología, Trabajo Social, Psiquiatría).</li>
-            <li><strong>Desmanicomialización:</strong> Producción de saber fuera de las lógicas del encierro.</li>
+            <li><strong>Derechos Humanos:</strong> Presunción de capacidad y atención en el lazo social.</li>
+            <li><strong>Interdisciplina:</strong> Registro plural de saberes (Enfermería, Psicología, TS, Psiquiatría).</li>
         </ul>
+        <a href="consentimiento-informado.pdf" target="_blank" style="color: var(--unla-blue); font-weight: bold; text-decoration: underline;">📄 Leer Consentimiento Informado (PDF)</a>
     </section>
 
     <section class="card">
-        <h2>Biblioteca y Marco Teórico</h2>
-        <div class="autor-box"><strong>Galende, Emiliano:</strong> <a href="galende.pdf" target="_blank">Subjetividad y Gestión ↗</a></div>
-        <div class="autor-box"><strong>Stolkiner, Alicia:</strong> <a href="stolkiner.pdf" target="_blank">La Intersectorialidad en Salud Mental ↗</a></div>
-        <div class="autor-box"><strong>Otros autores:</strong> Menéndez, Amarante, Basaglia, Goldenberg.</div>
+        <h2>Biblioteca de Referencia</h2>
+        <p>Acceso a textos fundamentales para la práctica territorial:</p>
+        <div class="bibliografia-grid">
+            <div class="autor-box">
+                <strong>Emiliano Galende</strong>
+                <a href="galende.pdf" target="_blank">Subjetividad y Gestión ↗</a>
+            </div>
+            <div class="autor-box">
+                <strong>Alicia Stolkiner</strong>
+                <a href="stolkiner.pdf" target="_blank">La Intersectorialidad ↗</a>
+            </div>
+            <div class="autor-box">
+                <strong>Otros Referentes</strong>
+                <p style="font-size: 0.85em; color: #666; margin: 0;">Menéndez, Amarante, Basaglia, Goldenberg, Yanco, Gerlero, Augsburger.</p>
+            </div>
+        </div>
     </section>
 
     <section class="card">
         <div class="badge" style="background: #007bff;">Operatividad</div>
         <h2>Registro de Intervención Territorial</h2>
-        <p>Al iniciar el registro, usted acepta los términos del <a href="consentimiento-informado.pdf" target="_blank">Consentimiento Informado</a>.</p>
+        <p>Utilice el botón inferior para iniciar la carga de datos en el sistema oficial de Google Forms:</p>
         
+        <!-- LINK VERIFICADO Y CORREGIDO -->
         <a href="https://docs.google.com" target="_blank" class="btn-registro">
-            📝 INICIAR CARGA DE DATOS (Google Forms)
+            📝 INICIAR CARGA EN GOOGLE FORMS
         </a>
     </section>
 
-    <footer style="text-align: center; color: #888; padding: 40px;">
-        © 2026 Alejandro Magotti | Dispositivo Digital de Sistematización Territorial
+    <footer>
+        Alejandro Magotti © 2026 | UNLa - RISAM - UPA 1
     </footer>
 
 </body>
