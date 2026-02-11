@@ -11,9 +11,12 @@
         .card { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); margin-bottom: 25px; border-left: 8px solid var(--unla-blue); }
         .badge { background: var(--health-green); color: white; padding: 6px 15px; border-radius: 20px; font-size: 0.85em; display: inline-block; margin-bottom: 15px; text-transform: uppercase; }
         .bibliografia-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin-top: 20px; }
-        .autor-box { background: #f8f9fa; padding: 15px; border-radius: 10px; border: 1px solid #eee; }
+        .autor-box { background: #f8f9fa; padding: 15px; border-radius: 10px; border: 1px solid #eee; transition: 0.3s; }
+        .autor-box:hover { background: #eef2f7; transform: translateY(-3px); }
         .autor-box strong { color: var(--unla-blue); display: block; margin-bottom: 5px; }
-        .btn-registro { display: block; background: var(--health-green); color: white; text-align: center; padding: 25px; border-radius: 15px; text-decoration: none; font-weight: bold; font-size: 1.3em; margin-top: 20px; }
+        .autor-box a { color: var(--unla-blue); text-decoration: none; font-weight: bold; }
+        .autor-box a:hover { text-decoration: underline; }
+        .btn-registro { display: block; background: var(--health-green); color: white; text-align: center; padding: 25px; border-radius: 15px; text-decoration: none; font-weight: bold; font-size: 1.3em; margin-top: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
     </style>
 </head>
 <body>
@@ -25,15 +28,20 @@
     <section class="card">
         <div class="badge">Ejes Territoriales</div>
         <h2>UPA 1 Lomas de Zamora & Hospital Bonaparte</h2>
-        <p><strong>Espacio de Tesis:</strong> Sistematización de datos en territorio (Villa Fiorito) para la toma de decisiones en políticas públicas.</p>
+        <p><strong>Espacio de Tesis:</strong> Sistematización de datos en territorio (Villa Fiorito) para la producción de estadísticas locales y toma de decisiones en políticas públicas de salud mental.</p>
     </section>
 
     <section class="card">
         <h2>Marco Teórico y Referencias Bibliográficas</h2>
-        <p>Este dispositivo digital se sustenta en los desarrollos conceptuales de los siguientes autores fundamentales:</p>
+        <p>Haga clic en los autores destacados para acceder a sus textos fundamentales:</p>
         
         <div class="bibliografia-grid">
-            <div class="autor-box"><strong>Emiliano Galende</strong> Subjetividad y gestión en Salud Mental.</div>
+            <div class="autor-box">
+                <a href="https://vivilasaludmental.com.ar" target="_blank">
+                    <strong>Emiliano Galende</strong> 
+                    Texto: "Salud Mental y Subjetividad" ↗
+                </a>
+            </div>
             <div class="autor-box"><strong>Alicia Stolkiner</strong> Interdisciplina y Salud Mental Comunitaria.</div>
             <div class="autor-box"><strong>Eduardo Menéndez</strong> Modelo Médico Hegemónico y autoatención.</div>
             <div class="autor-box"><strong>Franco Basaglia</strong> La desinstitucionalización y libertad.</div>
@@ -46,7 +54,7 @@
 
     <section class="card">
         <div class="badge" style="background: #007bff;">Operatividad</div>
-        <h2>Registro de Intervención</h2>
+        <h2>Registro de Intervención Territorial</h2>
         <a href="consentimiento-informado.pdf" target="_blank" style="color: var(--unla-blue); font-weight: bold;">Acceder a Consentimiento Informado (PDF)</a>
         <a href="https://docs.google.com" target="_blank" class="btn-registro">
             📝 INICIAR CARGA EN GOOGLE FORMS
