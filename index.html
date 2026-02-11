@@ -6,17 +6,14 @@
     <title>Alejandro Magotti - Salud Mental UNLa / RISAM</title>
     <style>
         :root { --unla-blue: #004a99; --health-green: #28a745; --bonaparte-blue: #00a1e4; --lomas-maroon: #800000; }
-        body { font-family: 'Segoe UI', Tahoma, sans-serif; line-height: 1.7; color: #2c3e50; max-width: 950px; margin: 0 auto; padding: 20px; background-color: #f0f4f8; }
-        header { background: linear-gradient(135deg, var(--unla-blue), #002d5a); color: white; padding: 45px 20px; text-align: center; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+        body { font-family: 'Segoe UI', sans-serif; line-height: 1.7; color: #2c3e50; max-width: 950px; margin: 0 auto; padding: 20px; background-color: #f0f4f8; }
+        header { background: linear-gradient(135deg, var(--unla-blue), #002d5a); color: white; padding: 45px; text-align: center; border-radius: 15px; margin-bottom: 30px; }
         .card { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); margin-bottom: 25px; border-left: 8px solid var(--unla-blue); }
-        .badge { background: var(--health-green); color: white; padding: 6px 15px; border-radius: 20px; font-size: 0.85em; display: inline-block; margin-bottom: 15px; text-transform: uppercase; }
-        .bibliografia-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin-top: 20px; }
-        .autor-box { background: #f8f9fa; padding: 15px; border-radius: 10px; border: 1px solid #eee; transition: 0.3s; }
-        .autor-box:hover { background: #eef2f7; transform: translateY(-3px); }
-        .autor-box strong { color: var(--unla-blue); display: block; margin-bottom: 5px; }
-        .autor-box a { color: var(--unla-blue); text-decoration: none; font-weight: bold; }
-        .autor-box a:hover { text-decoration: underline; }
-        .btn-registro { display: block; background: var(--health-green); color: white; text-align: center; padding: 25px; border-radius: 15px; text-decoration: none; font-weight: bold; font-size: 1.3em; margin-top: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+        .badge { background: var(--health-green); color: white; padding: 6px 15px; border-radius: 20px; font-size: 0.85em; display: inline-block; margin-bottom: 15px; }
+        .bibliografia-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px; }
+        .autor-box { background: #f8f9fa; padding: 20px; border-radius: 10px; border: 1px solid #eee; }
+        .autor-box a { color: var(--unla-blue); text-decoration: none; font-weight: bold; display: block; margin-top: 10px; }
+        .btn-registro { display: block; background: var(--health-green); color: white; text-align: center; padding: 25px; border-radius: 15px; text-decoration: none; font-weight: bold; font-size: 1.4em; box-shadow: 0 6px 12px rgba(40, 167, 69, 0.3); margin-top: 25px; }
     </style>
 </head>
 <body>
@@ -26,48 +23,50 @@
     </header>
 
     <section class="card">
-        <div class="badge">Ejes Territoriales</div>
+        <div class="badge">Trayectoria e Inserción</div>
         <h2>UPA 1 Lomas de Zamora & Hospital Bonaparte</h2>
-        <p><strong>Espacio de Tesis:</strong> Sistematización de datos en territorio (Villa Fiorito) para la producción de estadísticas locales.</p>
+        <p><strong>Tesis de Maestría:</strong> Sistematización de datos territoriales para políticas públicas en Villa Fiorito.</p>
+        <ul>
+            <li>Miembro del Consejo Departamental de Graduados - UNLa.</li>
+            <li>Residencia RISAM (Finalización: Octubre 2026).</li>
+        </ul>
     </section>
 
     <section class="card">
-        <h2>Marco Teórico y Referencias Bibliográficas</h2>
-        <p>Haga clic en los autores destacados para acceder a sus textos fundamentales:</p>
-        
+        <h2>Fundamentos Ético-Políticos (Ley 26.657)</h2>
+        <ul>
+            <li>Abordaje Comunitario vs. Aislamiento.</li>
+            <li>Interdisciplina y Derechos Humanos.</li>
+        </ul>
+    </section>
+
+    <section class="card">
+        <h2>Marco Teórico y Bibliografía</h2>
+        <p>Acceda a los textos fundamentales (PDF locales):</p>
         <div class="bibliografia-grid">
             <div class="autor-box">
-                <a href="https://vivilasaludmental.com.ar" target="_blank">
-                    <strong>Emiliano Galende</strong> 
-                    Texto: "Salud Mental y Subjetividad" ↗
-                </a>
+                <strong>Emiliano Galende</strong>
+                <a href="galende.pdf" target="_blank">📄 Leer: Salud Mental y Subjetividad</a>
             </div>
             <div class="autor-box">
-                <a href="https://www.ms.gba.gov.ar" target="_blank">
-                    <strong>Alicia Stolkiner</strong> 
-                    Texto: "La Intersectorialidad y el Espacio de la Salud Mental" ↗
-                </a>
+                <strong>Alicia Stolkiner</strong>
+                <a href="stolkiner.pdf" target="_blank">📄 Leer: La Intersectorialidad</a>
             </div>
-            <div class="autor-box"><strong>Eduardo Menéndez</strong> Modelo Médico Hegemónico y autoatención.</div>
-            <div class="autor-box"><strong>Franco Basaglia</strong> La desinstitucionalización y libertad.</div>
-            <div class="autor-box"><strong>Mauricio Goldenberg</strong> Pionero en psiquiatría comunitaria argentina.</div>
-            <div class="autor-box"><strong>Paulo Amarante</strong> Reforma Psiquiátrica en la región.</div>
-            <div class="autor-box"><strong>Débora Yanco / Sandra Gerlero</strong> Investigación y epidemiología crítica.</div>
-            <div class="autor-box"><strong>Ana Cecilia Augsburger</strong> Políticas y prácticas de Salud Mental.</div>
         </div>
     </section>
 
     <section class="card">
         <div class="badge" style="background: #007bff;">Operatividad</div>
         <h2>Registro de Intervención Territorial</h2>
-        <a href="consentimiento-informado.pdf" target="_blank" style="color: var(--unla-blue); font-weight: bold;">Acceder a Consentimiento Informado (PDF)</a>
+        <p>Complete la crónica de su intervención para la base de datos de la tesis:</p>
+        <!-- LINK CORREGIDO AL FORMULARIO DE GOOGLE -->
         <a href="https://docs.google.com" target="_blank" class="btn-registro">
-            📝 INICIAR CARGA EN GOOGLE FORMS
+            📝 INICIAR CARGA DE DATOS (Google Forms)
         </a>
     </section>
 
     <footer style="text-align: center; color: #888; padding: 20px;">
-        Alejandro Magotti © 2026 | UNLa - RISAM - UPA 1
+        © 2026 Alejandro Magotti | UNLa - Lomas de Zamora
     </footer>
 </body>
 </html>
