@@ -29,25 +29,7 @@
         </nav>
     </header>
 
-    <section class="card">
-        <div class="badge">Inserción Territorial y Profesional</div>
-        <h2>UPA 1 Lomas de Zamora & RISAM</h2>
-        <div class="territorio-box">
-            <p><strong>Lugar de Trabajo Actual:</strong> UPA 1 - Lomas de Zamora (Villa Fiorito). Centro de desarrollo para el trabajo de campo de la Tesis de Maestría.</p>
-            <p><strong>Formación Especializada:</strong> Última rotación externa de la Residencia Interdisciplinaria de Salud Mental (RISAM) - Hospital Lic. Laura Bonaparte.</p>
-        </div>
-        <ul>
-            <li>Miembro del Consejo Departamental de Graduados - UNLa.</li>
-            <li>Licenciado en Enfermería.</li>
-        </ul>
-    </section>
-
-    <section class="card">
-        <h2>Proyecto de Tesis (Marzo 2026 - 2028)</h2>
-        <p>El objetivo es la <strong>sistematización de datos territoriales en la UPA 1</strong>. Esta herramienta busca producir estadísticas locales que fundamenten decisiones políticas y fortalezcan la red comunitaria de salud mental en la zona.</p>
-    </section>
-
-    <section class="card">
+        <section class="card">
         <div class="badge" style="background: #007bff;">Operatividad de Campo</div>
         <h2>Registro de Intervención Territorial</h2>
         
@@ -57,6 +39,38 @@
             <br>
             <label style="cursor:pointer;"><input type="checkbox" required> He leído y acepto los términos para iniciar el registro.</label>
         </div>
+
+        <!-- FORMULARIO CALIBRADO SEGÚN EL MODELO OFICIAL -->
+        <form action="https://formspree.io/f/maqdqjol" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
+            
+            <div>
+                <label style="display: block; font-weight: bold;">Tu Email Institucional/Referencia:</label>
+                <input type="email" name="email" placeholder="ejemplo@unla.edu.ar" required style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc;">
+            </div>
+
+            <div>
+                <label style="display: block; font-weight: bold;">Dispositivo de Intervención:</label>
+                <select name="dispositivo" required style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc; background: white;">
+                    <option value="UPA 1 Lomas de Zamora">UPA 1 Lomas de Zamora (Fiorito)</option>
+                    <option value="Hospital Lic. Laura Bonaparte">Hospital Lic. Laura Bonaparte</option>
+                    <option value="Otro Dispositivo">Otro Dispositivo de la Red</option>
+                </select>
+            </div>
+
+            <div>
+                <label style="display: block; font-weight: bold;">Crónica de la Intervención (Mensaje):</label>
+                <textarea name="message" rows="5" placeholder="Escriba aquí la crónica para la base de datos de tesis..." required style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc;"></textarea>
+            </div>
+
+            <!-- Campo oculto para que Formspree no se confunda -->
+            <input type="hidden" name="_subject" value="Nuevo Registro Territorial - Tesis UNLa">
+
+            <button type="submit" style="background-color: var(--health-green); color: white; border: none; padding: 15px; border-radius: 8px; font-weight: bold; cursor: pointer;">
+                Guardar y Firmar Registro
+            </button>
+        </form>
+    </section>
+
 
         <!-- FORMULARIO CONECTADO A FORMSPREE -->
         <form action="https://formspree.io" method="POST" enctype="multipart/form-data" style="display: flex; flex-direction: column; gap: 15px;">
