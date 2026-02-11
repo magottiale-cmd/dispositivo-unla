@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lic. Alejandro Magotti - Salud Mental UNLa / RISAM</title>
+    <title>Alejandro Magotti - Salud Mental UNLa / RISAM</title>
     <style>
-        :root { --unla-blue: #004a99; --health-green: #28a745; --bonaparte-blue: #00a1e4; --lomas-maroon: #800000; }
+        :root { --unla-blue: #004a99; --bonaparte-blue: #00a1e4; --health-green: #28a745; --lomas-maroon: #800000; }
         body { font-family: 'Segoe UI', Tahoma, sans-serif; line-height: 1.7; color: #2c3e50; max-width: 950px; margin: 0 auto; padding: 20px; background-color: #f0f4f8; }
         header { background: linear-gradient(135deg, var(--unla-blue), #002d5a); color: white; padding: 45px 20px; text-align: center; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
         .nav-links { margin-top: 20px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
         .nav-links a { color: white; text-decoration: none; font-weight: bold; padding: 8px 15px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.4); font-size: 0.85em; transition: 0.3s; }
-        .nav-links a:hover { background: white; color: var(--unla-blue); }
         .card { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); margin-bottom: 25px; border-left: 8px solid var(--unla-blue); }
         .badge { background: var(--health-green); color: white; padding: 6px 15px; border-radius: 20px; font-size: 0.85em; display: inline-block; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
         .territorio-box { background-color: #e3f2fd; border-left: 6px solid var(--bonaparte-blue); padding: 20px; border-radius: 10px; margin: 15px 0; }
-        .iframe-container { width: 100%; overflow: hidden; border-radius: 15px; border: 2px solid #ddd; margin-top: 20px; background: white; }
+        /* Botón de Registro Final e Infalible */
+        .btn-registro { display: block; background: var(--health-green); color: white; text-align: center; padding: 25px; border-radius: 15px; text-decoration: none; font-weight: bold; font-size: 1.4em; box-shadow: 0 6px 12px rgba(40, 167, 69, 0.3); transition: 0.3s; margin-top: 20px; border: none; }
+        .btn-registro:hover { background: #218838; transform: translateY(-3px); box-shadow: 0 8px 15px rgba(40, 167, 69, 0.4); }
     </style>
 </head>
 <body>
@@ -43,29 +44,19 @@
 
     <section class="card">
         <h2>Proyecto de Tesis (Marzo 2026 - 2028)</h2>
-        <p>Sistematización de datos territoriales en la UPA 1 para fortalecer las políticas públicas de salud mental comunitaria y la red local de cuidados.</p>
-        <p><em>Duración estimada de investigación: 2 años y medio.</em></p>
-    </section>
-
-    <section class="card">
-        <h2>Marco Legal y Ético (Ley 26.657)</h2>
-        <ul>
-            <li><strong>Abordaje Comunitario:</strong> Sustitución definitiva de las lógicas de aislamiento.</li>
-            <li><strong>Interdisciplina:</strong> Integración de saberes para una clínica de lo común.</li>
-            <li><strong>Derechos Humanos:</strong> Presunción de capacidad y atención en el territorio.</li>
-        </ul>
+        <p>Sistematización de datos territoriales en la UPA 1 para fortalecer las políticas públicas de salud mental comunitaria.</p>
         <a href="consentimiento-informado.pdf" target="_blank" style="color: var(--unla-blue); font-weight: bold; text-decoration: underline;">Descargar Consentimiento Informado (PDF)</a>
     </section>
 
     <section class="card">
         <div class="badge" style="background: #007bff;">Operatividad de Campo</div>
         <h2>Registro de Intervención Territorial</h2>
-        <p>Complete el siguiente formulario para registrar sus intervenciones. Los datos se tabularán automáticamente para el análisis estadístico de la tesis.</p>
+        <p>Haga clic en el botón inferior para abrir el formulario oficial de carga de crónicas para la tesis.</p>
         
-        <!-- FORMULARIO DE GOOGLE INTEGRADO AL 100% -->
-        <div class="iframe-container">
-            <iframe src="https://docs.google.com" width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
-        </div>
+        <!-- LINK DIRECTO AL FORMULARIO DE GOOGLE -->
+        <a href="https://docs.google.com" target="_blank" class="btn-registro">
+            📝 INICIAR CARGA DE DATOS (GOOGLE FORMS)
+        </a>
     </section>
 
     <footer style="text-align: center; color: #888; font-size: 0.85em; margin-top: 50px; padding: 20px; border-top: 1px solid #eee;">
