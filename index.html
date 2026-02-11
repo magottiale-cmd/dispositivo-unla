@@ -60,3 +60,86 @@
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alejandro Magotti - Salud Mental UNLa / RISAM</title>
+    <style>
+        :root { --unla-blue: #004a99; --bonaparte-color: #00a1e4; --health-green: #28a745; --lomas-maroon: #800000; }
+        body { font-family: 'Segoe UI', sans-serif; line-height: 1.7; color: #2c3e50; max-width: 950px; margin: 0 auto; padding: 20px; background-color: #fdfdfd; }
+        header { background: linear-gradient(135deg, var(--unla-blue), #002d5a); color: white; padding: 40px; text-align: center; border-radius: 15px; margin-bottom: 30px; }
+        .nav-links { margin-top: 20px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+        .nav-links a { color: white; text-decoration: none; font-weight: bold; padding: 8px 12px; border-radius: 6px; border: 1px solid white; font-size: 0.85em; }
+        .card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 25px; border-left: 6px solid var(--unla-blue); }
+        .badge { background: var(--health-green); color: white; padding: 5px 12px; border-radius: 20px; font-size: 0.85em; display: inline-block; margin-bottom: 10px; }
+        .territorio-box { background-color: #e3f2fd; border-left: 6px solid var(--bonaparte-color); padding: 15px; border-radius: 8px; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Lic. Alejandro Magotti</h1>
+        <p>Especialista en Salud Mental y Psiquiatría (RISAM) | Maestrando UNLa</p>
+        <nav class="nav-links">
+            <a href="https://www.unla.edu.ar" target="_blank">Portal UNLa</a>
+            <a href="https://hospitalbonaparte.gob.ar" target="_blank" style="background: var(--bonaparte-color); border: none;">Hosp. Laura Bonaparte</a>
+            <a href="https://www.lomasdezamora.gov.ar" target="_blank" style="background: var(--lomas-maroon); border: none;">Lomas de Zamora</a>
+        </nav>
+    </header>
+
+    <section class="card">
+        <div class="badge">Inserción Territorial Actual</div>
+        <h2>UPA 1 Lomas de Zamora & RISAM</h2>
+        <div class="territorio-box">
+            <p><strong>Lugar de Trabajo y Tesis:</strong> UPA 1 - Lomas de Zamora (Villa Fiorito). Centro de desarrollo del trabajo de campo para la Tesis de Maestría.</p>
+            <p><strong>Rotación Externa:</strong> Parte del Programa de Formación de la Residencia Interdisciplinaria de Salud Mental (RISAM) del <em>Hospital Lic. Laura Bonaparte</em>.</p>
+        </div>
+        <ul>
+            <li>Miembro del Consejo Departamental de Graduados - UNLa.</li>
+            <li>Enfoque: Producción de estadísticas para la toma de decisiones en políticas de salud mental.</li>
+        </ul>
+    </section>
+
+    <section class="card">
+        <h2>Proyecto de Tesis (Inicio Marzo 2026)</h2>
+        <p>El objetivo central es la <strong>sistematización de datos en el territorio de la UPA 1</strong> para visibilizar las demandas reales de la comunidad y proponer intervenciones basadas en evidencia institucional y social.</p>
+    </section>
+
+    <section class="card">
+        <div class="badge" style="background: #007bff;">Operatividad de Campo</div>
+        <h2>Registro de Intervención Territorial</h2>
+        
+        <div style="background-color: #f8f9fa; border: 1px solid #dee2e6; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+            <p><strong>Consentimiento Informado:</strong> Los datos recolectados se utilizarán con fines académicos y estadísticos para el fortalecimiento de la red de salud local.</p>
+            <a href="consentimiento-informado.pdf" target="_blank" style="color: var(--unla-blue); font-weight: bold; text-decoration: underline;">Leer PDF Completo</a>
+            <br>
+            <label><input type="checkbox" required> He leído y acepto los términos.</label>
+        </div>
+
+        <form style="display: flex; flex-direction: column; gap: 15px;">
+            <div>
+                <label style="display: block; font-weight: bold;">Dispositivo:</label>
+                <select required style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc;">
+                    <option>UPA 1 Lomas de Zamora</option>
+                    <option>Hospital Lic. Laura Bonaparte</option>
+                    <option>Otro Dispositivo Territorial</option>
+                </select>
+            </div>
+            <div>
+                <label style="display: block; font-weight: bold;">Crónica de la Intervención:</label>
+                <textarea rows="5" placeholder="Escriba aquí la crónica para la base de datos de tesis..." required style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc;"></textarea>
+            </div>
+            <button type="submit" style="background-color: var(--health-green); color: white; border: none; padding: 15px; border-radius: 8px; font-weight: bold; cursor: pointer;">
+                Guardar y Firmar Registro
+            </button>
+        </form>
+    </section>
+
+    <footer style="text-align: center; color: #888; font-size: 0.8em; margin-top: 50px; padding: 20px; border-top: 1px solid #eee;">
+        Alejandro Magotti © 2026 | UPA 1 Lomas de Zamora - RISAM Bonaparte - UNLa
+    </footer>
+
+</body>
+</html>
