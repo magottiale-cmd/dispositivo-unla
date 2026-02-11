@@ -3,73 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alejandro Magotti - Salud Mental UNLa / RISAM</title>
+    <title>Alejandro Magotti - Dispositivo de Investigación UNLa</title>
     <style>
         :root { --unla-blue: #004a99; --health-green: #28a745; --bonaparte-blue: #00a1e4; --lomas-maroon: #800000; }
-        body { font-family: 'Segoe UI', Tahoma, sans-serif; line-height: 1.7; color: #2c3e50; max-width: 950px; margin: 0 auto; padding: 20px; background-color: #f4f7f9; }
-        header { background: linear-gradient(135deg, var(--unla-blue), #002d5a); color: white; padding: 45px 20px; text-align: center; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
-        .nav-links { margin-top: 20px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
-        .nav-links a { color: white; text-decoration: none; font-weight: bold; padding: 8px 15px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.4); font-size: 0.9em; transition: 0.3s; }
-        .card { background: white; padding: 35px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); margin-bottom: 25px; border-left: 10px solid var(--unla-blue); }
-        .badge { background: var(--health-green); color: white; padding: 6px 15px; border-radius: 20px; font-size: 0.85em; display: inline-block; margin-bottom: 15px; text-transform: uppercase; }
-        .territorio-box { background-color: #e3f2fd; border-left: 6px solid var(--bonaparte-blue); padding: 20px; border-radius: 10px; margin: 15px 0; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; line-height: 1.7; color: #2c3e50; max-width: 1000px; margin: 0 auto; padding: 20px; background-color: #f4f7f9; }
+        header { background: linear-gradient(135deg, var(--unla-blue), #002d5a); color: white; padding: 60px 20px; text-align: center; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+        .card { background: white; padding: 35px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); margin-bottom: 30px; border-left: 10px solid var(--unla-blue); }
+        .badge { background: var(--health-green); color: white; padding: 6px 15px; border-radius: 20px; font-size: 0.9em; display: inline-block; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
+        .territorio-box { background-color: #e3f2fd; border-left: 6px solid var(--bonaparte-blue); padding: 20px; border-radius: 10px; margin: 20px 0; }
+        .ley-mental { background-color: #fff3cd; border-left: 6px solid #ffc107; padding: 20px; border-radius: 10px; font-style: italic; }
         .autor-box { background: #fdfdfd; padding: 15px; border-radius: 12px; border: 1px solid #eee; margin-bottom: 10px; }
-        .autor-box a { color: #d9534f; text-decoration: none; font-weight: bold; }
-        .btn-registro { display: block; background: var(--health-green); color: white; text-align: center; padding: 25px; border-radius: 15px; text-decoration: none; font-weight: bold; font-size: 1.4em; box-shadow: 0 6px 12px rgba(40, 167, 69, 0.3); transition: 0.4s; margin-top: 20px; }
-        .btn-registro:hover { background: #218838; transform: translateY(-3px); }
+        .btn-registro { display: block; background: var(--health-green); color: white; text-align: center; padding: 25px; border-radius: 15px; text-decoration: none; font-weight: bold; font-size: 1.5em; box-shadow: 0 8px 15px rgba(40, 167, 69, 0.4); transition: 0.4s; margin-top: 30px; }
+        .btn-registro:hover { background: #218838; transform: scale(1.02); }
     </style>
 </head>
 <body>
+
     <header>
         <h1>Lic. Alejandro Magotti</h1>
         <p>Especialista en Salud Mental y Psiquiatría (RISAM) | Maestrando UNLa</p>
-        <nav class="nav-links">
-            <a href="https://www.unla.edu.ar" target="_blank">Portal UNLa</a>
-            <a href="https://hospitalbonaparte.gob.ar" target="_blank" style="background: var(--bonaparte-blue); border: none;">Hosp. Laura Bonaparte</a>
-            <a href="https://www.lomasdezamora.gov.ar" target="_blank" style="background: var(--lomas-maroon); border: none;">Lomas de Zamora</a>
-        </nav>
+        <p><em>Sistematización de Intervenciones Territoriales para la Toma de Decisiones en Políticas Públicas</em></p>
     </header>
 
     <section class="card">
-        <div class="badge">Inserción Territorial</div>
-        <h2>UPA 1 Lomas de Zamora & Hospital Bonaparte</h2>
+        <div class="badge">Introducción al Proyecto</div>
+        <h2>¿Por qué este proyecto de investigación?</h2>
+        <p>En el marco de la <strong>Maestría en Salud Mental Comunitaria (UNLa)</strong> y la residencia <strong>RISAM del Hospital Lic. Laura Bonaparte</strong>, surge la necesidad de crear una herramienta digital que permita la sistematización técnica de las intervenciones en el territorio.</p>
+        <p>La falta de registros unificados en dispositivos de base comunitaria dificulta la producción de estadísticas locales. Este proyecto busca transformar la "crónica narrativa" en <strong>datos procesables</strong> para fundamentar decisiones políticas sanitarias que mejoren la red de cuidados en el Conurbano Sur.</p>
+    </section>
+
+    <section class="card">
+        <h2>Marco Institucional y Territorial</h2>
         <div class="territorio-box">
-            <p><strong>Eje de Tesis:</strong> Sistematización de datos territoriales en la <strong>UPA 1 (Villa Fiorito)</strong> para el fortalecimiento de las políticas públicas locales.</p>
+            <p><strong>Lugar de Trabajo y Campo de Tesis:</strong> UPA 1 - Lomas de Zamora (Villa Fiorito).</p>
+            <p><strong>Instituciones Articuladas:</strong> Universidad Nacional de Lanús (Departamento de Salud Comunitaria) y Hospital Nacional Lic. Laura Bonaparte.</p>
         </div>
         <ul>
-            <li>Miembro del Consejo Departamental de Graduados - UNLa.</li>
-            <li>Residencia RISAM (Finalización: Octubre 2026).</li>
-            <li>Maestría en Salud Mental Comunitaria (Inicio Marzo 2026).</li>
+            <li><strong>Población:</strong> Usuarios del sistema de salud en contextos de vulnerabilidad socio-sanitaria.</li>
+            <li><strong>Dispositivo:</strong> Abordaje territorial interdisciplinario.</li>
         </ul>
     </section>
 
     <section class="card">
-        <h2>Marco Legal y Biblioteca</h2>
-        <p>Principios de la Ley 26.657 y Referencias:</p>
-        <div class="autor-box"><strong>Galende:</strong> <a href="galende.pdf" target="_blank">Subjetividad y Gestión ↗</a></div>
-        <div class="autor-box"><strong>Stolkiner:</strong> <a href="stolkiner.pdf" target="_blank">La Intersectorialidad ↗</a></div>
-        <div class="autor-box"><strong>Otros Autores:</strong> Menéndez, Basaglia, Goldenberg, Amarante, Yanco, Gerlero, Augsburger.</div>
+        <h2>Fundamentación Ética: Ley Nacional 26.657</h2>
+        <div class="ley-mental">
+            <p>"La Salud Mental es un proceso determinado por componentes históricos, socioeconómicos, culturales, biológicos y psicológicos, cuya preservación y mejoramiento implica una dinámica de construcción social vinculada a la concreción de los derechos humanos y sociales de toda persona." (Art. 3)</p>
+        </div>
+        <p>Este registro digital garantiza:</p>
+        <ul>
+            <li><strong>Anonimato:</strong> Protección de datos personales (Ley 25.326).</li>
+            <li><strong>Interdisciplina:</strong> Registro plural de saberes (Enfermería, Psicología, Trabajo Social, Psiquiatría).</li>
+            <li><strong>Desmanicomialización:</strong> Producción de saber fuera de las lógicas del encierro.</li>
+        </ul>
     </section>
 
     <section class="card">
-        <div class="badge" style="background: #007bff;">Operatividad de Campo</div>
-        <h2>Registro de Intervención Territorial</h2>
-        
-        <div style="background: #fff3cd; padding: 20px; border-radius: 10px; border: 1px solid #ffeeba;">
-            <a href="consentimiento-informado.pdf" target="_blank" style="color: #856404; font-weight: bold; text-decoration: underline;">
-                📄 LEER CONSENTIMIENTO INFORMADO (PDF)
-            </a>
-            <p style="font-size: 0.9em; margin-top: 10px;"><em>Al presionar el botón verde inferior, usted confirma la aceptación ética para el registro de su crónica.</em></p>
-        </div>
+        <h2>Biblioteca y Marco Teórico</h2>
+        <div class="autor-box"><strong>Galende, Emiliano:</strong> <a href="galende.pdf" target="_blank">Subjetividad y Gestión ↗</a></div>
+        <div class="autor-box"><strong>Stolkiner, Alicia:</strong> <a href="stolkiner.pdf" target="_blank">La Intersectorialidad en Salud Mental ↗</a></div>
+        <div class="autor-box"><strong>Otros autores:</strong> Menéndez, Amarante, Basaglia, Goldenberg.</div>
+    </section>
 
-        <!-- LINK CORREGIDO AL FORMULARIO DE GOOGLE (SIN DESVIOS) -->
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfSI1Digm9h13CZq3j7UVg039CB_spQ4nQjWNsQkp8CeIZdEg/viewform" target="_blank" class="btn-registro">
-            📝 INICIAR CARGA EN GOOGLE FORMS
+    <section class="card">
+        <div class="badge" style="background: #007bff;">Operatividad</div>
+        <h2>Registro de Intervención Territorial</h2>
+        <p>Al iniciar el registro, usted acepta los términos del <a href="consentimiento-informado.pdf" target="_blank">Consentimiento Informado</a>.</p>
+        
+        <a href="https://docs.google.com" target="_blank" class="btn-registro">
+            📝 INICIAR CARGA DE DATOS (Google Forms)
         </a>
     </section>
 
-    <footer style="text-align: center; color: #888; padding: 40px 20px; border-top: 1px solid #ddd;">
-        Alejandro Magotti © 2026 | UNLa - Lomas de Zamora - RISAM Bonaparte
+    <footer style="text-align: center; color: #888; padding: 40px;">
+        © 2026 Alejandro Magotti | Dispositivo Digital de Sistematización Territorial
     </footer>
+
 </body>
 </html>
