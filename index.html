@@ -9,9 +9,11 @@
         body { font-family: 'Segoe UI', sans-serif; line-height: 1.7; color: #2c3e50; max-width: 950px; margin: 0 auto; padding: 20px; background-color: #fdfdfd; }
         header { background: linear-gradient(135deg, var(--unla-blue), #002d5a); color: white; padding: 40px; text-align: center; border-radius: 15px; margin-bottom: 30px; }
         .nav-links { margin-top: 20px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
-        .nav-links a { color: white; text-decoration: none; font-weight: bold; padding: 8px 12px; border-radius: 6px; border: 1px solid white; font-size: 0.85em; }
+        .nav-links a { color: white; text-decoration: none; font-weight: bold; padding: 8px 12px; border-radius: 6px; border: 1px solid white; font-size: 0.85em; transition: 0.3s; }
+        .nav-links a:hover { background: white; color: var(--unla-blue); }
         .card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 25px; border-left: 6px solid var(--unla-blue); }
         .badge { background: var(--health-green); color: white; padding: 5px 12px; border-radius: 20px; font-size: 0.85em; display: inline-block; margin-bottom: 10px; }
+        .territorio-box { background-color: #e3f2fd; border-left: 6px solid var(--bonaparte-color); padding: 15px; border-radius: 8px; margin-bottom: 20px; }
         .consentimiento-box { background-color: #f8f9fa; border: 1px solid #dee2e6; padding: 20px; border-radius: 8px; margin: 20px 0; }
         .btn-pdf { color: var(--unla-blue); font-weight: bold; text-decoration: underline; display: inline-block; margin: 10px 0; }
     </style>
@@ -29,10 +31,31 @@
     </header>
 
     <section class="card">
-        <div class="badge">Inserción Territorial y Profesional</div>
-        <h2>UPA 1 Lomas de Zamora & RISAM</h2>
-        <p><strong>Lugar de Trabajo Actual:</strong> UPA 1 - Lomas de Zamora (Villa Fiorito). Centro de desarrollo para el trabajo de campo de la Tesis de Maestría.</p>
-        <p><strong>Formación Especializada:</strong> Última rotación externa de la RISAM - Hospital Lic. Laura Bonaparte.</p>
+        <div class="badge">Trayectoria Institucional</div>
+        <h2>Inserción Territorial y Profesional</h2>
+        <div class="territorio-box">
+            <p><strong>Lugar de Trabajo:</strong> UPA 1 - Lomas de Zamora (Fiorito). Sede del trabajo de campo para la Tesis de Maestría.</p>
+            <p><strong>Formación:</strong> Última rotación externa de la RISAM - Hospital Lic. Laura Bonaparte.</p>
+        </div>
+        <ul>
+            <li>Miembro del Consejo Departamental de Graduados - UNLa.</li>
+            <li>Licenciado en Enfermería.</li>
+        </ul>
+    </section>
+
+    <section class="card">
+        <h2>Proyecto de Tesis (Marzo 2026 - 2028)</h2>
+        <p>Investigación centrada en la <strong>sistematización de datos territoriales en la UPA 1</strong> para la producción de estadísticas locales y el fortalecimiento de las políticas públicas de salud mental en Lomas de Zamora.</p>
+        <p><em>Duración estimada: 2 años y medio.</em></p>
+    </section>
+
+    <section class="card">
+        <h2>Fundamentos Ético-Políticos (Ley 26.657)</h2>
+        <ul>
+            <li><strong>Abordaje Comunitario:</strong> Sustitución de lógicas de aislamiento por dispositivos territoriales.</li>
+            <li><strong>Interdisciplina:</strong> Integración de saberes para una clínica de lo común.</li>
+            <li><strong>Derechos Humanos:</strong> Presunción de capacidad y derecho a la atención en el lazo social.</li>
+        </ul>
     </section>
 
     <section class="card">
