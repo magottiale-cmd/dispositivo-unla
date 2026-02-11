@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lic. Alejandro Magotti - Salud Mental UNLa</title>
+    <title>Lic. Alejandro Magotti - Salud Mental UNLa / RISAM</title>
     <style>
         :root { --unla-blue: #004a99; --health-green: #28a745; --bonaparte-blue: #00a1e4; --lomas-maroon: #800000; }
         body { font-family: 'Segoe UI', Tahoma, sans-serif; line-height: 1.7; color: #2c3e50; max-width: 950px; margin: 0 auto; padding: 20px; background-color: #f0f4f8; }
@@ -14,10 +14,7 @@
         .card { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); margin-bottom: 25px; border-left: 8px solid var(--unla-blue); }
         .badge { background: var(--health-green); color: white; padding: 6px 15px; border-radius: 20px; font-size: 0.85em; display: inline-block; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
         .territorio-box { background-color: #e3f2fd; border-left: 6px solid var(--bonaparte-blue); padding: 20px; border-radius: 10px; margin: 15px 0; }
-        .btn-registro { display: block; background: var(--health-green); color: white; text-align: center; padding: 25px; border-radius: 15px; text-decoration: none; font-weight: bold; font-size: 1.3em; box-shadow: 0 6px 12px rgba(40, 167, 69, 0.3); transition: 0.3s; margin-top: 20px; border: none; }
-        .btn-registro:hover { background: #218838; transform: translateY(-3px); box-shadow: 0 8px 15px rgba(40, 167, 69, 0.4); }
-        ul { padding-left: 20px; }
-        li { margin-bottom: 10px; }
+        .iframe-container { width: 100%; overflow: hidden; border-radius: 15px; border: 2px solid #ddd; margin-top: 20px; background: white; }
     </style>
 </head>
 <body>
@@ -63,12 +60,12 @@
     <section class="card">
         <div class="badge" style="background: #007bff;">Operatividad de Campo</div>
         <h2>Registro de Intervención Territorial</h2>
-        <p>Utilice el siguiente botón para registrar sus crónicas e intervenciones en el dispositivo territorial.</p>
+        <p>Complete el siguiente formulario para registrar sus intervenciones. Los datos se tabularán automáticamente para el análisis estadístico de la tesis.</p>
         
-        <!-- LINK A TU DOCUMENTO DE GOOGLE (OPERATIVO) -->
-        <a href="https://docs.google.com" target="_blank" class="btn-registro">
-            📝 INICIAR REGISTRO DE CRÓNICA
-        </a>
+        <!-- FORMULARIO DE GOOGLE INTEGRADO AL 100% -->
+        <div class="iframe-container">
+            <iframe src="https://docs.google.com" width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+        </div>
     </section>
 
     <footer style="text-align: center; color: #888; font-size: 0.85em; margin-top: 50px; padding: 20px; border-top: 1px solid #eee;">
