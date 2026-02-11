@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alejandro Magotti - Especialista en Salud Mental</title>
+    <title>Alejandro Magotti - Salud Mental UNLa</title>
     <style>
         :root { --unla-blue: #004a99; --bonaparte-color: #00a1e4; --health-green: #28a745; }
-        body { font-family: 'Segoe UI', sans-serif; line-height: 1.7; color: #2c3e50; max-width: 900px; margin: 0 auto; padding: 20px; background-color: #fdfdfd; }
+        body { font-family: 'Segoe UI', sans-serif; line-height: 1.7; color: #2c3e50; max-width: 950px; margin: 0 auto; padding: 20px; background-color: #fdfdfd; }
         header { background: linear-gradient(135deg, var(--unla-blue), #002d5a); color: white; padding: 40px; text-align: center; border-radius: 15px; margin-bottom: 30px; }
-        .nav-links { margin-top: 20px; display: flex; justify-content: center; gap: 15px; }
+        .nav-links { margin-top: 20px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
         .nav-links a { color: white; text-decoration: none; font-weight: bold; padding: 10px 15px; border-radius: 8px; border: 1px solid white; font-size: 0.9em; }
         .card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 25px; border-left: 6px solid var(--unla-blue); }
         .consentimiento-box { background-color: #f8f9fa; border: 1px solid #dee2e6; padding: 20px; border-radius: 8px; margin: 20px 0; }
         .btn-pdf { color: var(--unla-blue); font-weight: bold; text-decoration: underline; display: inline-block; margin: 10px 0; }
+        .badge { background: var(--health-green); color: white; padding: 5px 12px; border-radius: 20px; font-size: 0.85em; display: inline-block; margin-bottom: 10px; }
     </style>
 </head>
 <body>
@@ -27,10 +28,25 @@
     </header>
 
     <section class="card">
+        <div class="badge">Perfil Profesional</div>
+        <h2>Trayectoria Institucional</h2>
+        <ul>
+            <li><strong>Residencia RISAM:</strong> Hospital Lic. Laura Bonaparte. Finalización Octubre 2026.</li>
+            <li><strong>Gestión Académica:</strong> Miembro del Consejo Departamental de Graduados - UNLa.</li>
+            <li><strong>Formación de Grado:</strong> Licenciado en Enfermería.</li>
+        </ul>
+    </section>
+
+    <section class="card">
+        <h2>Proyecto de Tesis - Maestría UNLa</h2>
+        <p><strong>Inicio:</strong> Marzo 2026 | <strong>Duración:</strong> 2 años y medio.</p>
+        <p><em>Articulación del marco teórico de la Salud Mental Comunitaria con herramientas tecnológicas para el fortalecimiento de redes territoriales.</em></p>
+    </section>
+
+    <section class="card">
         <h2>Registro de Intervención Territorial</h2>
         <div class="consentimiento-box">
             <p><strong>Consentimiento Informado:</strong> Los datos recolectados tienen fines académicos para la Maestría en Salud Mental Comunitaria (UNLa).</p>
-            <!-- ESTE ES EL ÚNICO LINK AL PDF -->
             <a href="consentimiento-informado.pdf" target="_blank" class="btn-pdf">Leer Consentimiento Informado (PDF)</a>
             <br>
             <label><input type="checkbox" required> He leído y acepto los términos.</label>
@@ -38,7 +54,7 @@
         <p><em>(El formulario operativo se conectará en la siguiente fase)</em></p>
     </section>
 
-    <footer style="text-align: center; color: #888; font-size: 0.8em; margin-top: 50px;">
+    <footer style="text-align: center; color: #888; font-size: 0.8em; margin-top: 50px; padding: 20px; border-top: 1px solid #eee;">
         Alejandro Magotti © 2026 | Maestría en Salud Mental Comunitaria UNLa
     </footer>
 
