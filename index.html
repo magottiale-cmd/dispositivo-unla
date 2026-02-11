@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alejandro Magotti - Dispositivo UNLa / Salud Comunitaria</title>
     <style>
-        :root { --unla-blue: #004a99; --health-green: #28a745; --bonaparte-blue: #00a1e4; --lomas-maroon: #800000; }
+        :root { --unla-blue: #004a99; --health-green: #28a745; --bonaparte-blue: #00a1e4; --lomas-maroon: #800000; --soft-gray: #f8f9fa; }
         body { font-family: 'Segoe UI', Tahoma, sans-serif; line-height: 1.7; color: #2c3e50; max-width: 1000px; margin: 0 auto; padding: 20px; background-color: #f0f4f8; }
         
         header { background: linear-gradient(135deg, var(--unla-blue), #002d5a); color: white; padding: 50px 20px; text-align: center; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
         .nav-links { margin-top: 20px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
         
-        /* Botones Institucionales con Colores Originales */
+        /* Botones Institucionales */
         .nav-links a { color: white; text-decoration: none; font-weight: bold; padding: 10px 18px; border-radius: 8px; font-size: 0.9em; transition: 0.3s; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
         .link-unla { background-color: var(--unla-blue); border: 2px solid white; }
         .link-bonaparte { background-color: var(--bonaparte-blue); }
@@ -22,14 +22,21 @@
         .badge { background: var(--health-green); color: white; padding: 6px 15px; border-radius: 20px; font-size: 0.9em; display: inline-block; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
         
         .fundamentacion-box { background-color: #e3f2fd; border-left: 5px solid var(--bonaparte-blue); padding: 20px; border-radius: 10px; margin: 20px 0; }
-        .cita-apa { background: #f1f8ff; padding: 20px; border-radius: 10px; border-left: 5px solid var(--unla-blue); font-size: 0.95em; margin: 20px 0; }
+        .cita-apa { background: #f1f8ff; padding: 20px; border-radius: 10px; border-left: 5px solid var(--unla-blue); font-size: 0.95em; margin: 15px 0; }
         .fuente { font-size: 0.85em; color: #555; display: block; margin-top: 10px; font-style: italic; }
+        
+        /* Estilos Interactivos para la Comunidad */
+        details { background: var(--soft-gray); padding: 15px; border-radius: 8px; margin-bottom: 10px; cursor: pointer; border: 1px solid #eee; }
+        details summary { font-weight: bold; color: var(--unla-blue); font-size: 1.1em; outline: none; }
+        details[open] { border-left: 5px solid var(--health-green); }
+
+        .comunidad-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px; }
+        .comunidad-box { background: #fff; padding: 20px; border-radius: 12px; border-top: 5px solid var(--bonaparte-blue); box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
         
         .bibliografia-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px; }
         .autor-box { background: #fff; padding: 15px; border-radius: 12px; border: 1px solid #eee; text-align: center; }
         .autor-link { background: #d9534f; color: white !important; text-decoration: none; font-weight: bold; display: block; padding: 8px; border-radius: 5px; font-size: 0.8em; margin-top: 10px; }
         
-        /* Botón Verde Operativo */
         .btn-registro { display: block; background: var(--health-green); color: white; text-align: center; padding: 25px; border-radius: 15px; text-decoration: none; font-weight: bold; font-size: 1.4em; box-shadow: 0 8px 15px rgba(40, 167, 69, 0.4); transition: 0.4s; margin-top: 30px; border: none; }
         .btn-registro:hover { background: #218838; transform: translateY(-3px); }
     </style>
@@ -46,52 +53,62 @@
         </nav>
     </header>
 
+    <!-- SECCIÓN INTERACTIVA PARA LA COMUNIDAD -->
+    <section class="card" style="border-left-color: var(--bonaparte-blue);">
+        <div class="badge" style="background: var(--bonaparte-blue);">Para el Barrio y la Comunidad</div>
+        <h2>Entendiendo la Salud Mental Comunitaria</h2>
+        <p>Siguiendo a <strong>Stolkiner (2010)</strong>, la salud no se da en un consultorio aislado, sino en el territorio donde la gente vive, trabaja y sueña.</p>
+        
+        <div class="comunidad-grid">
+            <div class="comunidad-box">
+                <h3>🏥 La UPA 1 como Refugio</h3>
+                <p>En Villa Fiorito, la UPA 1 es el espacio de escucha y cuidado interdisciplinario para los vecinos de Lomas de Zamora.</p>
+            </div>
+            <div class="comunidad-box">
+                <h3>🤝 Vínculos que Sanan</h3>
+                <p>Como sostiene <strong>Basaglia</strong>, el lazo social es terapéutico. La salud mental comunitaria busca que nadie transite su dolor en soledad o exclusión.</p>
+            </div>
+        </div>
+
+        <h3 style="margin-top: 30px;">Preguntas Frecuentes e Interactividad</h3>
+        <details>
+            <summary>¿Qué es la Ley Nacional 26.657?</summary>
+            <p>Es la ley que garantiza que tengas derecho a ser atendido en tu barrio, sin ser aislado de tu familia y con respeto total a tu libertad y dignidad humana.</p>
+        </details>
+        <details>
+            <summary>¿Por qué registramos lo que pasa en el territorio?</summary>
+            <p>Porque sistematizar las crónicas de la UPA 1 nos permite generar estadísticas que demuestren la necesidad de más recursos y mejores políticas públicas de salud mental.</p>
+        </details>
+    </section>
+
     <section class="card">
         <div class="badge">Sistematización e Investigación</div>
         <h2>Fundamentación del Proyecto de Tesis</h2>
         <div class="fundamentacion-box">
-            <p><strong>¿Por qué este trabajo?</strong> Esta investigación responde a la necesidad de sistematizar crónicas territoriales en el primer nivel de atención para transformarlas en indicadores estadísticos. Estos datos son fundamentales para fundamentar decisiones políticas de salud mental en contextos de alta vulnerabilidad.</p>
-            <p><strong>Lugar y Contexto:</strong> Se desarrolla en la <strong>UPA 1 de Lomas de Zamora (Villa Fiorito)</strong>, articulando la formación de la <strong>RISAM (Hospital Bonaparte)</strong> con la <strong>Maestría en Salud Mental Comunitaria (Periodo 2026-2028)</strong>.</p>
+            <p><strong>Propósito:</strong> Transformar la práctica territorial en indicadores estadísticos procesables para la toma de decisiones políticas en el Conurbano Sur (Periodo 2026-2028).</p>
         </div>
-        <h3>Objetivos Estratégicos:</h3>
-        <ul>
-            <li>Producción de saber local basado en la práctica interdisciplinaria.</li>
-            <li>Cumplimiento efectivo de la Ley Nacional de Salud Mental 26.657.</li>
-            <li>Visibilización de las demandas territoriales en Fiorito.</li>
-        </ul>
-    </section>
-
-    <section class="card" style="border-left-color: var(--bonaparte-blue);">
-        <div class="badge" style="background: var(--bonaparte-blue);">Marco Teórico (Normas APA 7)</div>
         
         <div class="cita-apa">
-            "La salud mental no es solo la ausencia de trastornos, sino un proceso de construcción social vinculado a la dinámica del lazo social y la defensa de los Derechos Humanos."
-            <span class="fuente">Galende, E. (1997). <em>De un horizonte incierto: Psicoanálisis y Salud Mental</em>. Paidós. <a href="galende.pdf" target="_blank">(PDF)</a></span>
-        </div>
-
-        <div class="cita-apa">
-            "Abordar la salud mental comunitaria implica necesariamente la intersectorialidad, articulando salud con educación, trabajo y justicia en el territorio."
-            <span class="fuente">Stolkiner, A. (2010). <em>La Intersectorialidad y el Espacio de la Salud Mental</em>. UNLa. <a href="stolkiner.pdf" target="_blank">(PDF)</a></span>
+            "La salud mental es un proceso de construcción social vinculado a la dinámica del lazo social y la defensa de los Derechos Humanos."
+            <span class="fuente">Galende, E. (1997). <em>De un horizonte incierto</em>. Paidós. <a href="galende.pdf" target="_blank">(Ver PDF)</a></span>
         </div>
     </section>
 
     <section class="card">
         <h2>Biblioteca Digital de Tesis</h2>
         <div class="bibliografia-grid">
-            <div class="autor-box"><strong>Emiliano Galende</strong><a href="galende.pdf" target="_blank" class="autor-link">📄 Leer PDF</a></div>
-            <div class="autor-box"><strong>Alicia Stolkiner</strong><a href="stolkiner.pdf" target="_blank" class="autor-link">📄 Leer PDF</a></div>
-            <div class="autor-box"><strong>Franco Basaglia</strong><a href="basaglia.pdf" target="_blank" class="autor-link">📄 Leer PDF</a></div>
-            <div class="autor-box"><strong>Eduardo Menéndez</strong><a href="menendez.pdf" target="_blank" class="autor-link">📄 Leer PDF</a></div>
+            <div class="autor-box"><strong>E. Galende</strong><a href="galende.pdf" target="_blank" class="autor-link">📄 Leer PDF</a></div>
+            <div class="autor-box"><strong>A. Stolkiner</strong><a href="stolkiner.pdf" target="_blank" class="autor-link">📄 Leer PDF</a></div>
+            <div class="autor-box"><strong>F. Basaglia</strong><a href="basaglia.pdf" target="_blank" class="autor-link">📄 Leer PDF</a></div>
+            <div class="autor-box"><strong>E. Menéndez</strong><a href="menendez.pdf" target="_blank" class="autor-link">📄 Leer PDF</a></div>
         </div>
-        <p style="margin-top: 20px; font-size: 0.85em; color: #666; text-align: center;">Otros autores: Amarante, Yanco, Gerlero, Augsburger, Goldenberg.</p>
     </section>
 
     <section class="card" style="border-left-color: var(--health-green);">
-        <div class="badge" style="background: #007bff;">Operatividad Campo</div>
+        <div class="badge" style="background: #007bff;">Operatividad</div>
         <h2>Registro de Intervención de Tesis</h2>
-        <p>Al iniciar el registro, confirma haber leído el <a href="consentimiento-informado.pdf" target="_blank">Consentimiento Informado (PDF)</a>.</p>
+        <p>Al iniciar la carga, confirma haber leído el <a href="consentimiento-informado.pdf" target="_blank">Consentimiento Informado (PDF)</a>.</p>
         
-        <!-- RUTA SOLDADA Y VERIFICADA -->
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSfSI1Digm9h13CZq3j7UVg039CB_spQ4nQjWNsQkp8CeIZdEg/viewform" target="_blank" class="btn-registro">
             📝 INICIAR CARGA DE CRÓNICA EN TERRITORIO
         </a>
