@@ -14,9 +14,8 @@
         .card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 25px; border-left: 6px solid var(--unla-blue); }
         .badge { background: var(--health-green); color: white; padding: 5px 12px; border-radius: 20px; font-size: 0.85em; display: inline-block; margin-bottom: 10px; }
         .territorio-box { background-color: #e3f2fd; border-left: 6px solid var(--bonaparte-color); padding: 15px; border-radius: 8px; margin-bottom: 20px; }
-        .consentimiento-box { background-color: #f8f9fa; border: 1px solid #dee2e6; padding: 20px; border-radius: 8px; margin: 20px 0; }
-        .btn-pdf { color: var(--unla-blue); font-weight: bold; text-decoration: underline; display: inline-block; margin: 10px 0; }
-        .map-container { margin-top: 20px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border: 2px solid #ddd; }
+        .map-responsive { overflow:hidden; padding-bottom:56.25%; position:relative; height:0; border-radius: 12px; margin-top: 20px; border: 2px solid #ddd; }
+        .map-responsive iframe { left:0; top:0; height:100%; width:100%; position:absolute; border:0; }
     </style>
 </head>
 <body>
@@ -38,72 +37,35 @@
             <p><strong>Lugar de Trabajo Actual:</strong> UPA 1 - Lomas de Zamora (Fiorito). Sede del trabajo de campo para la Tesis de Maestría.</p>
             <p><strong>Formación:</strong> Última rotación externa de la RISAM - Hospital Lic. Laura Bonaparte.</p>
         </div>
-        <ul>
-            <li>Miembro del Consejo Departamental de Graduados - UNLa.</li>
-            <li>Licenciado en Enfermería.</li>
-        </ul>
-
-        <!-- MAPA INTERACTIVO DE LA UPA 1 -->
-        <div class="map-container">
+        
+        <!-- MAPA RESPONSIVO CORREGIDO -->
+        <div class="map-responsive">
             <iframe 
-                src="https://www.google.com" 
-                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+                src="https://maps.google.com" 
+                allowfullscreen title="Ubicación UPA 1">
             </iframe>
         </div>
     </section>
 
     <section class="card">
         <h2>Proyecto de Tesis (Marzo 2026 - 2028)</h2>
-        <p>Investigación centrada en la <strong>sistematización de datos territoriales en la UPA 1</strong> para la producción de estadísticas locales y el fortalecimiento de las políticas públicas de salud mental en Lomas de Zamora.</p>
-        <p><em>Duración estimada: 2 años y medio.</em></p>
-    </section>
-
-    <section class="card">
-        <h2>Fundamentos Ético-Políticos (Ley 26.657)</h2>
-        <ul>
-            <li><strong>Abordaje Comunitario:</strong> Sustitución de lógicas de aislamiento por dispositivos territoriales.</li>
-            <li><strong>Interdisciplina:</strong> Integración de saberes para una clínica de lo común.</li>
-            <li><strong>Derechos Humanos:</strong> Presunción de capacidad y derecho a la atención en el lazo social.</li>
-        </ul>
+        <p>Sistematización de datos territoriales en la **UPA 1** para fortalecer las políticas públicas de salud mental.</p>
     </section>
 
     <section class="card">
         <div class="badge" style="background: #007bff;">Operatividad de Campo</div>
         <h2>Registro de Intervención Territorial</h2>
-        
-        <div class="consentimiento-box">
-            <p><strong>Consentimiento Informado:</strong> Datos con fines académicos y estadísticos (Maestría UNLa).</p>
-            <a href="consentimiento-informado.pdf" target="_blank" class="btn-pdf">Leer Consentimiento Informado (PDF)</a>
-            <br>
-            <label style="cursor:pointer;"><input type="checkbox" required> He leído y acepto los términos.</label>
-        </div>
-
         <form action="https://formspree.io" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
-            <div>
-                <label style="display: block; font-weight: bold;">Tu Email Institucional:</label>
-                <input type="email" name="email" required style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc;">
-            </div>
-            <div>
-                <label style="display: block; font-weight: bold;">Dispositivo:</label>
-                <select name="dispositivo" required style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc;">
-                    <option>UPA 1 Lomas de Zamora (Fiorito)</option>
-                    <option>Hospital Lic. Laura Bonaparte</option>
-                    <option>Otro Dispositivo de la Red</option>
-                </select>
-            </div>
-            <div>
-                <label style="display: block; font-weight: bold;">Crónica de la Intervención:</label>
-                <textarea name="message" rows="5" placeholder="Escriba aquí la crónica para la base de datos..." required style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc;"></textarea>
-            </div>
+            <select name="dispositivo" required style="padding: 10px; border-radius: 8px; border: 1px solid #ccc;">
+                <option>UPA 1 Lomas de Zamora (Fiorito)</option>
+                <option>Hospital Lic. Laura Bonaparte</option>
+            </select>
+            <textarea name="message" rows="5" placeholder="Escriba la crónica aquí..." required style="padding: 10px; border-radius: 8px; border: 1px solid #ccc;"></textarea>
             <button type="submit" style="background-color: var(--health-green); color: white; border: none; padding: 15px; border-radius: 8px; font-weight: bold; cursor: pointer;">
-                Guardar y Firmar Registro
+                Guardar Registro
             </button>
         </form>
     </section>
-
-    <footer style="text-align: center; color: #888; font-size: 0.8em; margin-top: 50px; padding: 20px; border-top: 1px solid #eee;">
-        Alejandro Magotti © 2026 | UPA 1 Lomas de Zamora - RISAM Bonaparte - UNLa
-    </footer>
 
 </body>
 </html>
