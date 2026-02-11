@@ -19,9 +19,10 @@
         .territorio-box { background-color: #e3f2fd; border-left: 6px solid var(--bonaparte-blue); padding: 20px; border-radius: 10px; margin: 20px 0; }
         .ley-mental { background-color: #fff3cd; border-left: 6px solid #ffc107; padding: 20px; border-radius: 10px; font-style: italic; margin-bottom: 20px; }
         
-        .bibliografia-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin-top: 20px; }
-        .autor-box { background: #fdfdfd; padding: 15px; border-radius: 12px; border: 1px solid #eee; transition: 0.3s; }
-        .autor-box a { color: #d9534f; text-decoration: none; font-weight: bold; display: block; margin-top: 5px; }
+        .bibliografia-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; margin-top: 20px; }
+        .autor-box { background: #fdfdfd; padding: 15px; border-radius: 12px; border: 1px solid #eee; transition: 0.3s; display: flex; flex-direction: column; justify-content: space-between; }
+        .autor-box:hover { transform: translateY(-3px); box-shadow: 0 5px 10px rgba(0,0,0,0.05); }
+        .autor-link { background: #d9534f; color: white !important; text-decoration: none; font-weight: bold; text-align: center; padding: 8px; border-radius: 5px; font-size: 0.8em; margin-top: 10px; }
         
         .consentimiento-container { background: #f8f9fa; border: 1px dashed var(--unla-blue); padding: 20px; border-radius: 12px; text-align: center; margin-bottom: 20px; }
         .btn-registro { display: block; background: var(--health-green); color: white; text-align: center; padding: 25px; border-radius: 15px; text-decoration: none; font-weight: bold; font-size: 1.5em; box-shadow: 0 8px 15px rgba(40, 167, 69, 0.4); transition: 0.4s; border: none; }
@@ -43,12 +44,12 @@
     </header>
 
     <section class="card">
-        <div class="badge">Fundamentación de la Tesis</div>
-        <h2>Sistematización de Intervenciones Territoriales</h2>
-        <p>En el marco de la <strong>Maestría en Salud Mental Comunitaria (UNLa)</strong> y la residencia <strong>RISAM del Hospital Bonaparte</strong>, este proyecto busca transformar la crónica narrativa en datos procesables para fundamentar decisiones políticas sanitarias en el Conurbano Sur.</p>
+        <div class="badge">Sistematización de Datos</div>
+        <h2>Proyecto de Tesis - Maestría en Salud Mental Comunitaria</h2>
+        <p>Investigación centrada en la transformación de crónicas territoriales en datos estadísticos procesables para la fundamentación de políticas públicas en el Conurbano Sur.</p>
         <div class="territorio-box">
             <p><strong>Campo de Investigación:</strong> UPA 1 - Lomas de Zamora (Villa Fiorito).</p>
-            <p><strong>Objetivo:</strong> Producción de estadísticas locales para el fortalecimiento de la red de cuidados.</p>
+            <p><strong>Institución Formadora:</strong> RISAM del Hospital Nacional Lic. Laura Bonaparte.</p>
         </div>
     </section>
 
@@ -58,51 +59,55 @@
             <p>"La Salud Mental es un proceso determinado por componentes históricos, socioeconómicos, culturales, biológicos y psicológicos..." (Art. 3)</p>
         </div>
         <ul>
-            <li><strong>Derechos Humanos:</strong> Presunción de capacidad y atención en el lazo social.</li>
-            <li><strong>Interdisciplina:</strong> Registro plural de saberes (Enfermería, Psicología, TS, Psiquiatría).</li>
+            <li>Abordaje Comunitario e Interdisciplina.</li>
+            <li>Defensa irrestricta de los Derechos Humanos y el Lazo Social.</li>
         </ul>
     </section>
 
     <section class="card">
-        <h2>Biblioteca de Referencia</h2>
+        <h2>Biblioteca de Referencia (Marco Teórico)</h2>
+        <p>Acceda a los textos fundamentales para el trabajo de campo y la fundamentación académica:</p>
         <div class="bibliografia-grid">
             <div class="autor-box">
                 <strong>Emiliano Galende</strong>
-                <a href="galende.pdf" target="_blank">Subjetividad y Gestión ↗</a>
+                <a href="galende.pdf" target="_blank" class="autor-link">📄 Leer PDF</a>
             </div>
             <div class="autor-box">
                 <strong>Alicia Stolkiner</strong>
-                <a href="stolkiner.pdf" target="_blank">La Intersectorialidad ↗</a>
+                <a href="stolkiner.pdf" target="_blank" class="autor-link">📄 Leer PDF</a>
             </div>
             <div class="autor-box">
-                <strong>Otros Referentes</strong>
-                <p style="font-size: 0.85em; color: #666; margin: 0;">Menéndez, Amarante, Basaglia, Goldenberg, Yanco, Gerlero, Augsburger.</p>
+                <strong>Franco Basaglia</strong>
+                <a href="basaglia.pdf" target="_blank" class="autor-link">📄 Leer PDF</a>
+            </div>
+            <div class="autor-box">
+                <strong>Eduardo Menéndez</strong>
+                <a href="menendez.pdf" target="_blank" class="autor-link">📄 Leer PDF</a>
             </div>
         </div>
+        <p style="margin-top: 20px; font-size: 0.85em; color: #666;">Otras referencias: Paulo Amarante, Débora Yanco, Sandra Gerlero, Mauricio Goldenberg.</p>
     </section>
 
     <section class="card" style="border-left-color: var(--health-green);">
-        <div class="badge" style="background: #007bff;">Operatividad</div>
-        <h2>Registro de Intervención Territorial</h2>
+        <div class="badge" style="background: #007bff;">Operatividad Territorial</div>
+        <h2>Registro de Intervención de Tesis</h2>
         
-        <!-- REUBICACIÓN DEL CONSENTIMIENTO -->
         <div class="consentimiento-container">
-            <p style="margin-bottom: 10px;"><strong>Paso 1:</strong> Es obligatorio leer y aceptar el marco ético antes de registrar datos.</p>
-            <a href="consentimiento-informado.pdf" target="_blank" style="color: var(--unla-blue); font-weight: bold; text-decoration: underline; font-size: 1.1em;">
-                📄 LEER CONSENTIMIENTO INFORMADO (PDF)
+            <p><strong>Paso 1:</strong> Antes de iniciar la carga, es obligatorio leer el consentimiento ético.</p>
+            <a href="consentimiento-informado.pdf" target="_blank" style="color: var(--unla-blue); font-weight: bold; text-decoration: underline;">
+                📄 DESCARGAR CONSENTIMIENTO INFORMADO (PDF)
             </a>
         </div>
 
-        <p style="text-align: center; margin-bottom: 15px;"><strong>Paso 2:</strong> Una vez aceptado, inicie la carga de la crónica territorial:</p>
+        <p style="text-align: center; margin-bottom: 15px;"><strong>Paso 2:</strong> Inicie la carga de su crónica en el sistema oficial:</p>
         
-        <!-- LINK VERIFICADO Y SOLDADO AL BOTÓN -->
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSfSI1Digm9h13CZq3j7UVg039CB_spQ4nQjWNsQkp8CeIZdEg/viewform" target="_blank" class="btn-registro">
             📝 INICIAR CARGA EN GOOGLE FORMS
         </a>
     </section>
 
     <footer>
-        Alejandro Magotti © 2026 | UNLa - RISAM - UPA 1
+        Lic. Alejandro Magotti © 2026 | UNLa - RISAM - UPA 1
     </footer>
 
 </body>
