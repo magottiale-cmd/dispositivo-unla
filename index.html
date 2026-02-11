@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alejandro Magotti - Dispositivo UNLa / RISAM</title>
+    <title>Alejandro Magotti - Dispositivo UNLa / Salud Comunitaria</title>
     <style>
-        :root { --unla-blue: #004a99; --health-green: #28a745; --bonaparte-blue: #00a1e4; --lomas-maroon: #800000; }
-        body { font-family: 'Segoe UI', Tahoma, sans-serif; line-height: 1.7; color: #2c3e50; max-width: 1000px; margin: 0 auto; padding: 20px; background-color: #f4f7f9; }
+        :root { --unla-blue: #004a99; --health-green: #28a745; --bonaparte-blue: #00a1e4; --lomas-maroon: #800000; --soft-gray: #f8f9fa; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; line-height: 1.7; color: #2c3e50; max-width: 1000px; margin: 0 auto; padding: 20px; background-color: #f0f4f8; }
         
         header { background: linear-gradient(135deg, var(--unla-blue), #002d5a); color: white; padding: 50px 20px; text-align: center; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
         .nav-links { margin-top: 20px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
@@ -16,98 +16,94 @@
         .card { background: white; padding: 35px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); margin-bottom: 30px; border-left: 10px solid var(--unla-blue); }
         .badge { background: var(--health-green); color: white; padding: 6px 15px; border-radius: 20px; font-size: 0.9em; display: inline-block; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
         
-        .territorio-box { background-color: #e3f2fd; border-left: 6px solid var(--bonaparte-blue); padding: 20px; border-radius: 10px; margin: 20px 0; }
-        .ley-mental { background-color: #fff3cd; border-left: 6px solid #ffc107; padding: 20px; border-radius: 10px; font-style: italic; margin-bottom: 20px; }
+        /* Estilos para la sección interactiva */
+        details { background: var(--soft-gray); padding: 15px; border-radius: 8px; margin-bottom: 10px; cursor: pointer; border: 1px solid #eee; }
+        details summary { font-weight: bold; color: var(--unla-blue); font-size: 1.1em; outline: none; }
+        details[open] { border-left: 5px solid var(--health-green); }
+
+        .comunidad-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px; }
+        .comunidad-box { background: #e3f2fd; padding: 20px; border-radius: 12px; border-top: 5px solid var(--bonaparte-blue); }
         
-        .bibliografia-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; margin-top: 20px; }
-        .autor-box { background: #fdfdfd; padding: 15px; border-radius: 12px; border: 1px solid #eee; transition: 0.3s; display: flex; flex-direction: column; justify-content: space-between; }
-        .autor-box:hover { transform: translateY(-3px); box-shadow: 0 5px 10px rgba(0,0,0,0.05); }
-        .autor-link { background: #d9534f; color: white !important; text-decoration: none; font-weight: bold; text-align: center; padding: 8px; border-radius: 5px; font-size: 0.8em; margin-top: 10px; }
+        .bibliografia-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-top: 20px; }
+        .autor-box { background: #fff; padding: 15px; border-radius: 12px; border: 1px solid #eee; text-align: center; }
+        .autor-link { background: #d9534f; color: white !important; text-decoration: none; font-weight: bold; display: block; padding: 8px; border-radius: 5px; font-size: 0.8em; margin-top: 10px; }
         
-        .consentimiento-container { background: #f8f9fa; border: 1px dashed var(--unla-blue); padding: 20px; border-radius: 12px; text-align: center; margin-bottom: 20px; }
-        .btn-registro { display: block; background: var(--health-green); color: white; text-align: center; padding: 25px; border-radius: 15px; text-decoration: none; font-weight: bold; font-size: 1.5em; box-shadow: 0 8px 15px rgba(40, 167, 69, 0.4); transition: 0.4s; border: none; }
-        .btn-registro:hover { background: #218838; transform: scale(1.02); }
+        .btn-registro { display: block; background: var(--health-green); color: white; text-align: center; padding: 20px; border-radius: 15px; text-decoration: none; font-weight: bold; font-size: 1.3em; box-shadow: 0 8px 15px rgba(40, 167, 69, 0.4); transition: 0.4s; margin-top: 30px; }
+        .btn-registro:hover { transform: scale(1.02); }
         
-        footer { text-align: center; color: #7f8c8d; padding: 40px 20px; border-top: 1px solid #ddd; margin-top: 50px; }
+        footer { text-align: center; color: #7f8c8d; padding: 40px; border-top: 1px solid #ddd; }
     </style>
 </head>
 <body>
 
     <header>
         <h1>Lic. Alejandro Magotti</h1>
-        <p>Especialista en Salud Mental y Psiquiatría (RISAM) | Maestrando UNLa</p>
+        <p>Maestría en Salud Mental Comunitaria UNLa | Residencia RISAM Bonaparte</p>
         <nav class="nav-links">
             <a href="https://www.unla.edu.ar" target="_blank">Portal UNLa</a>
-            <a href="https://hospitalbonaparte.gob.ar" target="_blank" style="background: var(--bonaparte-blue); border: none;">Hosp. Laura Bonaparte</a>
-            <a href="https://www.lomasdezamora.gov.ar" target="_blank" style="background: var(--lomas-maroon); border: none;">Lomas de Zamora</a>
+            <a href="https://hospitalbonaparte.gob.ar" target="_blank">Hosp. Laura Bonaparte</a>
+            <a href="https://www.lomasdezamora.gov.ar" target="_blank">Lomas de Zamora</a>
         </nav>
     </header>
 
-    <section class="card">
-        <div class="badge">Sistematización de Datos</div>
-        <h2>Proyecto de Tesis - Maestría en Salud Mental Comunitaria</h2>
-        <p>Investigación centrada en la transformación de crónicas territoriales en datos estadísticos procesables para la fundamentación de políticas públicas en el Conurbano Sur.</p>
-        <div class="territorio-box">
-            <p><strong>Campo de Investigación:</strong> UPA 1 - Lomas de Zamora (Villa Fiorito).</p>
-            <p><strong>Institución Formadora:</strong> RISAM del Hospital Nacional Lic. Laura Bonaparte.</p>
+    <!-- SECCIÓN PARA LA COMUNIDAD -->
+    <section class="card" style="border-left-color: var(--bonaparte-blue);">
+        <div class="badge" style="background: var(--bonaparte-blue);">Para la Comunidad</div>
+        <h2>¿Qué es la Salud Mental Comunitaria?</h2>
+        <p>No se trata solo de "no estar enfermo". La Salud Mental es un <strong>derecho humano</strong> y una construcción colectiva. Se trata de cómo vivimos, cómo nos vinculamos y cómo el barrio (la UPA 1, el club, la escuela) nos sostiene.</p>
+        
+        <div class="comunidad-grid">
+            <div class="comunidad-box">
+                <h3>🏥 El rol de la UPA 1</h3>
+                <p>Ubicada en Villa Fiorito, la UPA es la puerta de entrada a la salud. Aquí trabajamos para que nadie transite sus problemas en soledad.</p>
+            </div>
+            <div class="comunidad-box">
+                <h3>🤝 Lazo Social</h3>
+                <p>Entendemos que la salud se recupera en comunidad, manteniendo los vínculos con la familia, los amigos y el trabajo.</p>
+            </div>
         </div>
+
+        <h3 style="margin-top: 30px;">Preguntas Frecuentes (Haga clic para expandir)</h3>
+        <details>
+            <summary>¿Estar mal de salud mental significa estar "loco"?</summary>
+            <p>De ninguna manera. Todos pasamos por crisis, angustias o problemas. La salud mental es parte de la salud integral, como cuidar el corazón o los pulmones.</p>
+        </details>
+        <details>
+            <summary>¿Tengo que dejar de ver a mi familia si estoy en tratamiento?</summary>
+            <p>Al contrario. La Ley Nacional 26.657 dice que tienes derecho a ser atendido sin ser aislado de tu entorno. El apoyo de los tuyos es la mejor medicina.</p>
+        </details>
+        <details>
+            <summary>¿Dónde puedo pedir ayuda en Lomas de Zamora?</summary>
+            <p>Puedes acercarte a la UPA 1 o a cualquier centro de salud (SALA) de tu barrio. La red de salud mental de Lomas de Zamora está disponible para escucharte.</p>
+        </details>
     </section>
 
+    <!-- SECCIÓN ACADÉMICA / TESIS -->
     <section class="card">
-        <h2>Marco Ético-Político (Ley 26.657)</h2>
-        <div class="ley-mental">
-            <p>"La Salud Mental es un proceso determinado por componentes históricos, socioeconómicos, culturales, biológicos y psicológicos..." (Art. 3)</p>
-        </div>
-        <ul>
-            <li>Abordaje Comunitario e Interdisciplina.</li>
-            <li>Defensa irrestricta de los Derechos Humanos y el Lazo Social.</li>
-        </ul>
-    </section>
-
-    <section class="card">
-        <h2>Biblioteca de Referencia (Marco Teórico)</h2>
-        <p>Acceda a los textos fundamentales para el trabajo de campo y la fundamentación académica:</p>
+        <div class="badge">Área Profesional / Tesis</div>
+        <h2>Sistematización de Datos en el Territorio</h2>
+        <p>Este dispositivo busca sistematizar las intervenciones en la <strong>UPA 1</strong> para generar estadísticas que fundamenten políticas públicas de salud mental en el Conurbano.</p>
+        
+        <h3>Biblioteca de Tesis (PDF)</h3>
         <div class="bibliografia-grid">
-            <div class="autor-box">
-                <strong>Emiliano Galende</strong>
-                <a href="galende.pdf" target="_blank" class="autor-link">📄 Leer PDF</a>
-            </div>
-            <div class="autor-box">
-                <strong>Alicia Stolkiner</strong>
-                <a href="stolkiner.pdf" target="_blank" class="autor-link">📄 Leer PDF</a>
-            </div>
-            <div class="autor-box">
-                <strong>Franco Basaglia</strong>
-                <a href="basaglia.pdf" target="_blank" class="autor-link">📄 Leer PDF</a>
-            </div>
-            <div class="autor-box">
-                <strong>Eduardo Menéndez</strong>
-                <a href="menendez.pdf" target="_blank" class="autor-link">📄 Leer PDF</a>
-            </div>
+            <div class="autor-box"><strong>E. Galende</strong><a href="galende.pdf" target="_blank" class="autor-link">📄 Leer</a></div>
+            <div class="autor-box"><strong>A. Stolkiner</strong><a href="stolkiner.pdf" target="_blank" class="autor-link">📄 Leer</a></div>
+            <div class="autor-box"><strong>F. Basaglia</strong><a href="basaglia.pdf" target="_blank" class="autor-link">📄 Leer</a></div>
+            <div class="autor-box"><strong>E. Menéndez</strong><a href="menendez.pdf" target="_blank" class="autor-link">📄 Leer</a></div>
         </div>
-        <p style="margin-top: 20px; font-size: 0.85em; color: #666;">Otras referencias: Paulo Amarante, Débora Yanco, Sandra Gerlero, Mauricio Goldenberg.</p>
     </section>
 
+    <!-- REGISTRO OPERATIVO -->
     <section class="card" style="border-left-color: var(--health-green);">
-        <div class="badge" style="background: #007bff;">Operatividad Territorial</div>
+        <div class="badge" style="background: #007bff;">Operatividad</div>
         <h2>Registro de Intervención de Tesis</h2>
-        
-        <div class="consentimiento-container">
-            <p><strong>Paso 1:</strong> Antes de iniciar la carga, es obligatorio leer el consentimiento ético.</p>
-            <a href="consentimiento-informado.pdf" target="_blank" style="color: var(--unla-blue); font-weight: bold; text-decoration: underline;">
-                📄 DESCARGAR CONSENTIMIENTO INFORMADO (PDF)
-            </a>
-        </div>
-
-        <p style="text-align: center; margin-bottom: 15px;"><strong>Paso 2:</strong> Inicie la carga de su crónica en el sistema oficial:</p>
-        
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfSI1Digm9h13CZq3j7UVg039CB_spQ4nQjWNsQkp8CeIZdEg/viewform" target="_blank" class="btn-registro">
-            📝 INICIAR CARGA EN GOOGLE FORMS
-        </a>
+        <p>Carga de crónicas territoriales para la sistematización estadística.</p>
+        <a href="consentimiento-informado.pdf" target="_blank" style="color: var(--unla-blue); font-weight: bold; text-decoration: underline;">Descargar Consentimiento Informado</a>
+        <a href="https://docs.google.com" target="_blank" class="btn-registro">📝 INICIAR CARGA DE CRÓNICA</a>
     </section>
 
     <footer>
-        Lic. Alejandro Magotti © 2026 | UNLa - RISAM - UPA 1
+        Lic. Alejandro Magotti © 2026 | UNLa - RISAM Bonaparte - UPA 1 Lomas de Zamora
     </footer>
 
 </body>
