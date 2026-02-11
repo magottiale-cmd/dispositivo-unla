@@ -3,70 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alejandro Magotti - Salud Mental UNLa / RISAM</title>
+    <title>Lic. Alejandro Magotti - Salud Mental UNLa / RISAM</title>
     <style>
         :root { --unla-blue: #004a99; --health-green: #28a745; --bonaparte-blue: #00a1e4; --lomas-maroon: #800000; }
-        body { font-family: 'Segoe UI', sans-serif; line-height: 1.7; color: #2c3e50; max-width: 950px; margin: 0 auto; padding: 20px; background-color: #f0f4f8; }
-        header { background: linear-gradient(135deg, var(--unla-blue), #002d5a); color: white; padding: 45px; text-align: center; border-radius: 15px; margin-bottom: 30px; }
-        .card { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); margin-bottom: 25px; border-left: 8px solid var(--unla-blue); }
-        .badge { background: var(--health-green); color: white; padding: 6px 15px; border-radius: 20px; font-size: 0.85em; display: inline-block; margin-bottom: 15px; }
-        .bibliografia-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px; }
-        .autor-box { background: #f8f9fa; padding: 20px; border-radius: 10px; border: 1px solid #eee; }
-        .autor-box a { color: var(--unla-blue); text-decoration: none; font-weight: bold; display: block; margin-top: 10px; }
-        .btn-registro { display: block; background: var(--health-green); color: white; text-align: center; padding: 25px; border-radius: 15px; text-decoration: none; font-weight: bold; font-size: 1.4em; box-shadow: 0 6px 12px rgba(40, 167, 69, 0.3); margin-top: 25px; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; line-height: 1.7; color: #2c3e50; max-width: 1000px; margin: 0 auto; padding: 20px; background-color: #f4f7f9; }
+        header { background: linear-gradient(135deg, var(--unla-blue), #002d5a); color: white; padding: 50px 20px; text-align: center; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+        .nav-links { margin-top: 20px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+        .nav-links a { color: white; text-decoration: none; font-weight: bold; padding: 8px 15px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.4); font-size: 0.9em; transition: 0.3s; }
+        .nav-links a:hover { background: white; color: var(--unla-blue); }
+        .card { background: white; padding: 35px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); margin-bottom: 30px; border-left: 10px solid var(--unla-blue); }
+        .badge { background: var(--health-green); color: white; padding: 6px 15px; border-radius: 20px; font-size: 0.9em; display: inline-block; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
+        .territorio-box { background-color: #e3f2fd; border-left: 6px solid var(--bonaparte-blue); padding: 20px; border-radius: 10px; margin: 20px 0; }
+        .bibliografia-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 25px; }
+        .autor-box { background: #fdfdfd; padding: 20px; border-radius: 12px; border: 1px solid #eee; transition: 0.3s; box-shadow: 0 2px 5px rgba(0,0,0,0.03); }
+        .autor-box:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .autor-box strong { color: var(--unla-blue); display: block; font-size: 1.1em; margin-bottom: 10px; }
+        .autor-box a { color: #d9534f; text-decoration: none; font-weight: bold; border: 1px solid #d9534f; padding: 5px 10px; border-radius: 5px; font-size: 0.85em; transition: 0.3s; }
+        .autor-box a:hover { background: #d9534f; color: white; }
+        .btn-registro { display: block; background: var(--health-green); color: white; text-align: center; padding: 30px; border-radius: 15px; text-decoration: none; font-weight: bold; font-size: 1.5em; box-shadow: 0 8px 15px rgba(40, 167, 69, 0.4); transition: 0.4s; margin-top: 30px; border: none; }
+        .btn-registro:hover { background: #218838; transform: scale(1.02); }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 12px; }
+        footer { text-align: center; color: #7f8c8d; padding: 40px 20px; border-top: 1px solid #ddd; margin-top: 50px; }
     </style>
 </head>
 <body>
     <header>
         <h1>Lic. Alejandro Magotti</h1>
         <p>Especialista en Salud Mental y Psiquiatría (RISAM) | Maestrando UNLa</p>
+        <nav class="nav-links">
+            <a href="https://www.unla.edu.ar" target="_blank">Portal UNLa</a>
+            <a href="https://hospitalbonaparte.gob.ar" target="_blank" style="background: var(--bonaparte-blue); border: none;">Hosp. Laura Bonaparte</a>
+            <a href="https://www.lomasdezamora.gov.ar" target="_blank" style="background: var(--lomas-maroon); border: none;">Lomas de Zamora</a>
+        </nav>
     </header>
 
     <section class="card">
-        <div class="badge">Trayectoria e Inserción</div>
+        <div class="badge">Trayectoria e Inserción Territorial</div>
         <h2>UPA 1 Lomas de Zamora & Hospital Bonaparte</h2>
-        <p><strong>Tesis de Maestría:</strong> Sistematización de datos territoriales para políticas públicas en Villa Fiorito.</p>
+        <div class="territorio-box">
+            <p><strong>Eje de Tesis:</strong> Sistematización de datos territoriales en la <strong>UPA 1 - Lomas de Zamora (Villa Fiorito)</strong> para el fortalecimiento de las políticas públicas y la red local de cuidados.</p>
+            <p><strong>Formación Especializada:</strong> Última rotación externa de la Residencia Interdisciplinaria de Salud Mental (RISAM) - Hospital Lic. Laura Bonaparte.</p>
+        </div>
         <ul>
             <li>Miembro del Consejo Departamental de Graduados - UNLa.</li>
-            <li>Residencia RISAM (Finalización: Octubre 2026).</li>
+            <li>Licenciado en Enfermería / Especialista en Salud Mental.</li>
+            <li>Cronograma de Maestría: Inicio Marzo 2026 - Duración 2 años y medio.</li>
         </ul>
     </section>
 
     <section class="card">
-        <h2>Fundamentos Ético-Políticos (Ley 26.657)</h2>
+        <h2>Marco Legal y Ético (Ley Nacional 26.657)</h2>
+        <p>Este dispositivo digital opera bajo los principios del paradigma de Derechos Humanos en Salud Mental:</p>
         <ul>
-            <li>Abordaje Comunitario vs. Aislamiento.</li>
-            <li>Interdisciplina y Derechos Humanos.</li>
+            <li><strong>Abordaje Comunitario:</strong> Sustitución de las lógicas de encierro por dispositivos de base territorial.</li>
+            <li><strong>Interdisciplina:</strong> Integración de saberes para una clínica del lazo social y lo común.</li>
+            <li><strong>Derechos de los Usuarios:</strong> Presunción de capacidad, derecho a la identidad y atención integral.</li>
         </ul>
+        <div style="margin-top: 20px;">
+            <a href="consentimiento-informado.pdf" target="_blank" style="color: var(--unla-blue); font-weight: bold; text-decoration: underline;">📄 Descargar Consentimiento Informado (PDF)</a>
+        </div>
     </section>
 
     <section class="card">
-        <h2>Marco Teórico y Bibliografía</h2>
-        <p>Acceda a los textos fundamentales (PDF locales):</p>
+        <h2>Marco Teórico y Biblioteca de Tesis</h2>
+        <p>Referencias fundamentales para la práctica comunitaria (Archivos PDF locales):</p>
         <div class="bibliografia-grid">
             <div class="autor-box">
                 <strong>Emiliano Galende</strong>
-                <a href="galende.pdf" target="_blank">📄 Leer: Salud Mental y Subjetividad</a>
+                <p>Conceptos de Subjetividad y Gestión.</p>
+                <a href="galende.pdf" target="_blank">PDF: Salud Mental y Subjetividad</a>
             </div>
             <div class="autor-box">
                 <strong>Alicia Stolkiner</strong>
-                <a href="stolkiner.pdf" target="_blank">📄 Leer: La Intersectorialidad</a>
+                <p>Intersectorialidad e Interdisciplina.</p>
+                <a href="stolkiner.pdf" target="_blank">PDF: La Intersectorialidad</a>
+            </div>
+            <div class="autor-box">
+                <strong>Otros Autores de Referencia</strong>
+                <p>Menéndez, Basaglia, Goldenberg, Amarante, Yanco, Gerlero, Augsburger.</p>
             </div>
         </div>
     </section>
 
     <section class="card">
-        <div class="badge" style="background: #007bff;">Operatividad</div>
+        <div class="badge" style="background: #007bff;">Operatividad de Campo</div>
         <h2>Registro de Intervención Territorial</h2>
-        <p>Complete la crónica de su intervención para la base de datos de la tesis:</p>
-        <!-- LINK CORREGIDO AL FORMULARIO DE GOOGLE -->
+        <p>Utilice el botón inferior para cargar crónicas e intervenciones. Los datos serán procesados automáticamente para el análisis estadístico de la tesis de maestría.</p>
+        
+        <!-- BOTÓN VERIFICADO: LINK AL FORMULARIO DE CARGA -->
         <a href="https://docs.google.com" target="_blank" class="btn-registro">
-            📝 INICIAR CARGA DE DATOS (Google Forms)
+            📝 INICIAR CARGA DE CRÓNICA (Google Forms)
         </a>
     </section>
 
-    <footer style="text-align: center; color: #888; padding: 20px;">
-        © 2026 Alejandro Magotti | UNLa - Lomas de Zamora
+    <footer>
+        Alejandro Magotti © 2026 | UNLa - Lomas de Zamora - RISAM Bonaparte
     </footer>
 </body>
 </html>
