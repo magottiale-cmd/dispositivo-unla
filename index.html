@@ -58,10 +58,11 @@
             <label style="cursor:pointer;"><input type="checkbox" required> He leído y acepto los términos para iniciar el registro.</label>
         </div>
 
-        <form style="display: flex; flex-direction: column; gap: 15px;">
+        <!-- FORMULARIO CONECTADO A FORMSPREE -->
+        <form action="https://formspree.io" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
             <div>
-                <label style="display: block; font-weight: bold;">Dispositivo:</label>
-                <select required style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc;">
+                <label style="display: block; font-weight: bold;">Dispositivo de Intervención:</label>
+                <select name="dispositivo" required style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc;">
                     <option>UPA 1 Lomas de Zamora (Fiorito)</option>
                     <option>Hospital Lic. Laura Bonaparte</option>
                     <option>Otro Dispositivo de la Red</option>
@@ -69,8 +70,12 @@
             </div>
             <div>
                 <label style="display: block; font-weight: bold;">Crónica de la Intervención:</label>
-                <textarea rows="5" placeholder="Escriba aquí la crónica para la base de datos de tesis..." required style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc;"></textarea>
+                <textarea name="cronica" rows="5" placeholder="Escriba aquí la crónica para la base de datos de tesis..." required style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc;"></textarea>
             </div>
+
+            <!-- Campo oculto para el asunto del mail -->
+            <input type="hidden" name="_subject" value="Nuevo Registro: Tesis Magotti UNLa">
+
             <button type="submit" style="background-color: var(--health-green); color: white; border: none; padding: 15px; border-radius: 8px; font-weight: bold; cursor: pointer;">
                 Guardar y Firmar Registro
             </button>
