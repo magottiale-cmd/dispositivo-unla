@@ -7,24 +7,15 @@
     <style>
         :root { --unla-blue: #004a99; --health-green: #28a745; --bonaparte-blue: #00a1e4; }
         body { font-family: 'Segoe UI', Tahoma, sans-serif; line-height: 1.7; color: #2c3e50; max-width: 1000px; margin: 0 auto; padding: 0; background-color: #f0f4f8; }
-        
         header { background: linear-gradient(135deg, var(--unla-blue), #1f4f68); color: white; padding: 50px 20px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
         .nav-links { margin-top: 20px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
         .nav-links a { color: white; text-decoration: none; font-weight: bold; padding: 8px 15px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.4); font-size: 0.85em; }
-
-        section { max-width: 900px; margin: 40px auto; padding: 35px; background: white; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-left: 10px solid var(--unla-blue); }
+        section { max-width: 800px; margin: 40px auto; padding: 35px; background: white; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-left: 10px solid var(--unla-blue); }
         .hidden { display: none; }
-        
-        h1, h2 { color: var(--unla-blue); }
         .badge { background: var(--health-green); color: white; padding: 6px 15px; border-radius: 20px; font-size: 0.9em; display: inline-block; margin-bottom: 15px; }
-
-        button { background-color: var(--unla-blue); color: white; padding: 15px 30px; border: none; border-radius: 8px; cursor: pointer; font-size: 1.1em; font-weight: bold; transition: 0.3s; width: 100%; }
-        button:hover { background-color: #1f4f68; transform: translateY(-2px); }
-
-        .alert { background-color: #fff3cd; border-left: 6px solid #ffc107; padding: 20px; border-radius: 10px; margin-top: 30px; font-weight: bold; }
-        .iframe-container { position: relative; width: 100%; height: 900px; margin-top: 20px; }
-        iframe { width: 100%; height: 100%; border: none; border-radius: 10px; border: 1px solid #ddd; }
-        
+        .btn-accion { background-color: var(--unla-blue); color: white; padding: 18px 30px; border: none; border-radius: 10px; cursor: pointer; font-size: 1.2em; font-weight: bold; transition: 0.3s; width: 100%; text-decoration: none; display: block; text-align: center; }
+        .btn-accion:hover { background-color: #1f4f68; transform: translateY(-2px); }
+        .alert { background-color: #fff3cd; border-left: 6px solid #ffc107; padding: 20px; border-radius: 10px; margin-top: 30px; font-weight: bold; color: #856404; }
         footer { text-align: center; padding: 40px; color: #777; font-size: 0.9em; border-top: 1px solid #ddd; }
     </style>
 </head>
@@ -40,39 +31,42 @@
     </div>
 </header>
 
+<!-- PASO 1: INICIO -->
 <section id="inicio">
     <div class="badge">Bienvenida</div>
-    <h2>Fortaleciendo la Continuidad del Cuidado</h2>
-    <p><strong>AcompañarteSM</strong> es una herramienta diseñada para facilitar el seguimiento comunitario, promoviendo el acceso a la salud según la <strong>Ley Nacional 26.657</strong>.</p>
-    <p>Este sistema permite a los profesionales del equipo de salud acompañar tu proceso de forma voluntaria, generando datos que ayudan a mejorar las políticas públicas territoriales.</p>
-    <button onclick="mostrarConsentimiento()">PARTICIPAR DEL SEGUIMIENTO</button>
+    <h2>Continuidad del Cuidado Territorial</h2>
+    <p><strong>AcompañarteSM</strong> es una herramienta diseñada para fortalecer el seguimiento comunitario según la <strong>Ley Nacional 26.657</strong>.</p>
+    <p>Este sistema permite al equipo de salud acompañar tu proceso de forma voluntaria, generando datos para mejorar las políticas públicas locales.</p>
+    <button class="btn-accion" onclick="mostrarConsentimiento()">PARTICIPAR DEL SEGUIMIENTO</button>
 </section>
 
+<!-- PASO 2: CONSENTIMIENTO -->
 <section id="consentimiento" class="hidden" style="border-left-color: var(--health-green);">
     <div class="badge" style="background: var(--unla-blue);">Marco Ético</div>
     <h2>Consentimiento Informado</h2>
-    <p>La participación es <strong>voluntaria</strong>. Tus respuestas se utilizarán para mejorar tu seguimiento clínico y para fines de investigación de la Maestría en Salud Mental Comunitaria (UNLa).</p>
-    <p>Usted puede retirar su participación en cualquier momento sin que esto afecte su atención habitual.</p>
-    <button onclick="mostrarFormulario()" style="background-color: var(--health-green);">ACEPTO LOS TÉRMINOS Y CONTINUAR</button>
+    <p>La participación es <strong>voluntaria y anónima</strong>. Tus respuestas se utilizarán para tu seguimiento clínico y para la investigación de la Maestría en Salud Mental Comunitaria (UNLa).</p>
+    <p>Al continuar, confirmas que has comprendido los términos del dispositivo.</p>
+    <button class="btn-accion" onclick="mostrarFormulario()" style="background-color: var(--health-green);">ACEPTO Y CONTINUAR AL REGISTRO</button>
 </section>
 
-<section id="formulario" class="hidden" style="border-left-color: var(--bonaparte-blue);">
-    <div class="badge" style="background: var(--bonaparte-blue);">Seguimiento Digital</div>
-    <h2>Registro de Bienestar Semanal</h2>
-    
-    <div class="iframe-container">
-        <!-- LINK DE TU NUEVO FORMULARIO ACTUALIZADO -->
-        <iframe src="https://docs.google.com">Cargando…</iframe>
-    </div>
+<!-- PASO 3: ACCESO AL FORMULARIO -->
+<section id="formulario" class="hidden" style="border-left-color: var(--bonaparte-blue); text-align: center;">
+    <div class="badge" style="background: var(--bonaparte-blue);">Paso Final</div>
+    <h2>Registro de Bienestar</h2>
+    <p>Para garantizar la seguridad de tus datos, el registro se abrirá en una ventana segura de Google.</p>
+
+    <!-- LINK DIRECTO AL FORMULARIO (MÉTODO INFALIBLE) -->
+    <a href="https://docs.google.com" target="_blank" class="btn-accion" style="background-color: var(--bonaparte-blue);">
+        📝 ABRIR FORMULARIO DE SEGUIMIENTO
+    </a>
 
     <div class="alert">
-        ⚠️ ATENCIÓN: Si presentas una crisis o riesgo inmediato, comunícate con los servicios de emergencia o acude a la UPA 1 o al centro de salud más cercano.
+        ⚠️ IMPORTANTE: Si presentas una crisis o riesgo inmediato, comunícate con los servicios de emergencia o acude a la UPA 1 o al centro de salud más cercano.
     </div>
 </section>
 
 <footer>
-    <strong>Alejandro Magotti</strong><br>
-    UNLa - RISAM - Lomas de Zamora © 2026
+    <strong>Alejandro Magotti</strong> | UNLa - RISAM - Lomas de Zamora © 2026
 </footer>
 
 <script>
