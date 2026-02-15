@@ -1,198 +1,95 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AcompañarteSM</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AcompañarteSM - Dispositivo de Salud Mental</title>
+    <style>
+        :root { --unla-blue: #004a99; --health-green: #28a745; --bonaparte-blue: #00a1e4; --lomas-maroon: #800000; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; line-height: 1.7; color: #2c3e50; max-width: 1000px; margin: 0 auto; padding: 0; background-color: #f0f4f8; }
+        
+        header { background: linear-gradient(135deg, var(--unla-blue), #1f4f68); color: white; padding: 50px 20px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+        .nav-links { margin-top: 20px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+        .nav-links a { color: white; text-decoration: none; font-weight: bold; padding: 8px 15px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.4); font-size: 0.85em; }
 
-<style>
+        section { max-width: 900px; margin: 40px auto; padding: 35px; background: white; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-left: 10px solid var(--unla-blue); }
+        .hidden { display: none; }
+        
+        h1, h2 { color: var(--unla-blue); }
+        .badge { background: var(--health-green); color: white; padding: 6px 15px; border-radius: 20px; font-size: 0.9em; display: inline-block; margin-bottom: 15px; }
 
-body{
-font-family: Arial, Helvetica, sans-serif;
-margin:0;
-background-color:#f4f6f8;
-color:#333;
-}
+        button { background-color: var(--unla-blue); color: white; padding: 15px 30px; border: none; border-radius: 8px; cursor: pointer; font-size: 1.1em; font-weight: bold; transition: 0.3s; width: 100%; }
+        button:hover { background-color: #1f4f68; transform: translateY(-2px); }
 
-header{
-background: linear-gradient(135deg,#2c6e91,#1f4f68);
-color:white;
-padding:40px 20px;
-text-align:center;
-}
-
-section{
-max-width:900px;
-margin:40px auto;
-padding:25px;
-background:white;
-border-radius:12px;
-box-shadow:0 4px 15px rgba(0,0,0,0.08);
-}
-
-button{
-background-color:#2c6e91;
-color:white;
-padding:12px 22px;
-border:none;
-border-radius:6px;
-cursor:pointer;
-font-size:16px;
-}
-
-button:hover{
-background-color:#1f4f68;
-}
-
-.hidden{
-display:none;
-}
-
-.alert{
-background-color:#fff3cd;
-border-left:6px solid #ffc107;
-padding:15px;
-border-radius:6px;
-margin-top:20px;
-}
-
-iframe{
-width:100%;
-height:1300px;
-border:none;
-border-radius:8px;
-}
-
-footer{
-text-align:center;
-padding:25px;
-color:#777;
-}
-
-</style>
-
+        .alert { background-color: #fff3cd; border-left: 6px solid #ffc107; padding: 20px; border-radius: 10px; margin-top: 30px; font-weight: bold; }
+        iframe { width: 100%; height: 900px; border: none; border-radius: 10px; margin-top: 20px; border: 1px solid #ddd; }
+        
+        footer { text-align: center; padding: 40px; color: #777; font-size: 0.9em; border-top: 1px solid #ddd; }
+    </style>
 </head>
-
 <body>
 
 <header>
-
-<h1>AcompañarteSM</h1>
-
-<p>
-Dispositivo Digital de Soporte Comunitario en Salud Mental
-</p>
-
-<p>
-Alejandro Magotti<br>
-RISAM – Residencia Interdisciplinaria en Salud Mental<br>
-Maestría en Salud Mental Comunitaria – UNLa
-</p>
-
+    <h1>AcompañarteSM</h1>
+    <p>Dispositivo Digital de Soporte Comunitario en Salud Mental</p>
+    <div class="nav-links">
+        <span style="font-size: 0.8em; opacity: 0.8;">Marco Institucional:</span>
+        <a href="https://www.unla.edu.ar" target="_blank">UNLa</a>
+        <a href="https://hospitalbonaparte.gob.ar" target="_blank">Hosp. Bonaparte</a>
+        <a href="https://www.lomasdezamora.gov.ar" target="_blank">Lomas de Zamora</a>
+    </div>
 </header>
 
-<!-- INICIO -->
-
+<!-- PASO 1: INICIO -->
 <section id="inicio">
-
-<h2>Bienvenido</h2>
-
-<p>
-
-AcompañarteSM es un dispositivo digital orientado a fortalecer el seguimiento comunitario en salud mental, facilitando la continuidad del cuidado mediante herramientas accesibles y voluntarias.
-
-</p>
-
-<p>
-
-Este dispositivo forma parte de un proyecto académico y piloto de investigación.
-
-</p>
-
-<button onclick="mostrarConsentimiento()">
-Participar del seguimiento
-</button>
-
+    <div class="badge">Bienvenida al Usuario</div>
+    <h2>Fortaleciendo la Continuidad del Cuidado</h2>
+    <p><strong>AcompañarteSM</strong> es una herramienta diseñada para facilitar el seguimiento comunitario, promoviendo el acceso a la salud según la <strong>Ley Nacional 26.657</strong>.</p>
+    <p>Este sistema permite a los profesionales del equipo de salud acompañar tu proceso de forma voluntaria y digital, generando datos que ayudan a mejorar las políticas públicas de tu barrio.</p>
+    <button onclick="mostrarConsentimiento()">PARTICIPAR DEL SEGUIMIENTO</button>
 </section>
 
-<!-- CONSENTIMIENTO -->
-
-<section id="consentimiento" class="hidden">
-
-<h2>Consentimiento Informado</h2>
-
-<p>
-
-Usted está siendo invitado a participar en un dispositivo digital de seguimiento en salud mental.
-
-</p>
-
-<p>
-
-La participación es voluntaria. Los datos serán utilizados con fines académicos y de investigación, respetando el anonimato.
-
-</p>
-
-<p>
-
-Este dispositivo no reemplaza la atención profesional ni servicios de emergencia.
-
-</p>
-
-<button onclick="mostrarFormulario()">
-Acepto y continuar
-</button>
-
+<!-- PASO 2: CONSENTIMIENTO -->
+<section id="consentimiento" class="hidden" style="border-left-color: var(--health-green);">
+    <div class="badge" style="background: var(--unla-blue);">Marco Ético</div>
+    <h2>Consentimiento Informado</h2>
+    <p>La participación en este dispositivo es <strong>totalmente voluntaria</strong>. Tus respuestas son confidenciales y se utilizarán para mejorar tu seguimiento clínico y para fines de investigación de la Maestría en Salud Mental Comunitaria (UNLa).</p>
+    <p>Usted puede retirar su consentimiento en cualquier momento sin que esto afecte su atención en el equipo de salud.</p>
+    <a href="consentimiento-informado.pdf" target="_blank" style="display: block; margin-bottom: 20px; color: var(--unla-blue); font-weight: bold;">Leer documento completo (PDF)</a>
+    <button onclick="mostrarFormulario()" style="background-color: var(--health-green);">ACEPTO LOS TÉRMINOS Y CONTINUAR</button>
 </section>
 
-<!-- FORMULARIO -->
+<!-- PASO 3: FORMULARIO -->
+<section id="formulario" class="hidden" style="border-left-color: var(--bonaparte-blue);">
+    <div class="badge" style="background: var(--bonaparte-blue);">Seguimiento Digital</div>
+    <h2>Registro de Bienestar Semanal</h2>
+    <p>Complete los campos para que el equipo de salud pueda realizar el seguimiento de su proceso:</p>
+    
+    <iframe src="https://docs.google.com">Cargando…</iframe>
 
-<section id="formulario" class="hidden">
-
-<h2>Seguimiento Semanal</h2>
-
-<p>
-Complete el siguiente formulario:
-</p>
-
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfSI1Digm9h13CZq3j7UVg039CB_spQ4nQjWNsQkp8CeIZdEg/viewform?embedded=true">
-Cargando…
-</iframe>
-
-<div class="alert">
-
-Si presenta una crisis o riesgo inmediato, comuníquese con emergencias (911) o acuda al centro de salud más cercano.
-
-</div>
-
+    <div class="alert">
+        ⚠️ ATENCIÓN: Este dispositivo no es un servicio de emergencias. Si presentas una crisis o riesgo inmediato, comunícate con los servicios de emergencia o acude a la UPA 1 o al centro de salud más cercano.
+    </div>
 </section>
 
 <footer>
-
-AcompañarteSM – Proyecto piloto académico 2026
-
+    <strong>Alejandro Magotti</strong><br>
+    Sistematización de Datos para Políticas Públicas<br>
+    UNLa - RISAM - Lomas de Zamora © 2026
 </footer>
 
 <script>
-
 function mostrarConsentimiento(){
-
-document.getElementById("inicio").classList.add("hidden");
-
-document.getElementById("consentimiento").classList.remove("hidden");
-
+    document.getElementById("inicio").classList.add("hidden");
+    document.getElementById("consentimiento").classList.remove("hidden");
+    window.scrollTo(0,0);
 }
-
 function mostrarFormulario(){
-
-document.getElementById("consentimiento").classList.add("hidden");
-
-document.getElementById("formulario").classList.remove("hidden");
-
+    document.getElementById("consentimiento").classList.add("hidden");
+    document.getElementById("formulario").classList.remove("hidden");
+    window.scrollTo(0,0);
 }
-
 </script>
 
 </body>
-
 </html>
