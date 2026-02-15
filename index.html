@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AcompañarteSM - Dispositivo de Salud Mental</title>
     <style>
-        :root { --unla-blue: #004a99; --health-green: #28a745; --bonaparte-blue: #00a1e4; --lomas-maroon: #800000; }
+        :root { --unla-blue: #004a99; --health-green: #28a745; --bonaparte-blue: #00a1e4; }
         body { font-family: 'Segoe UI', Tahoma, sans-serif; line-height: 1.7; color: #2c3e50; max-width: 1000px; margin: 0 auto; padding: 0; background-color: #f0f4f8; }
         
         header { background: linear-gradient(135deg, var(--unla-blue), #1f4f68); color: white; padding: 50px 20px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
@@ -22,7 +22,8 @@
         button:hover { background-color: #1f4f68; transform: translateY(-2px); }
 
         .alert { background-color: #fff3cd; border-left: 6px solid #ffc107; padding: 20px; border-radius: 10px; margin-top: 30px; font-weight: bold; }
-        iframe { width: 100%; height: 900px; border: none; border-radius: 10px; margin-top: 20px; border: 1px solid #ddd; }
+        .iframe-container { position: relative; width: 100%; height: 900px; margin-top: 20px; }
+        iframe { width: 100%; height: 100%; border: none; border-radius: 10px; border: 1px solid #ddd; }
         
         footer { text-align: center; padding: 40px; color: #777; font-size: 0.9em; border-top: 1px solid #ddd; }
     </style>
@@ -33,48 +34,44 @@
     <h1>AcompañarteSM</h1>
     <p>Dispositivo Digital de Soporte Comunitario en Salud Mental</p>
     <div class="nav-links">
-        <span style="font-size: 0.8em; opacity: 0.8;">Marco Institucional:</span>
         <a href="https://www.unla.edu.ar" target="_blank">UNLa</a>
         <a href="https://hospitalbonaparte.gob.ar" target="_blank">Hosp. Bonaparte</a>
         <a href="https://www.lomasdezamora.gov.ar" target="_blank">Lomas de Zamora</a>
     </div>
 </header>
 
-<!-- PASO 1: INICIO -->
 <section id="inicio">
-    <div class="badge">Bienvenida al Usuario</div>
+    <div class="badge">Bienvenida</div>
     <h2>Fortaleciendo la Continuidad del Cuidado</h2>
     <p><strong>AcompañarteSM</strong> es una herramienta diseñada para facilitar el seguimiento comunitario, promoviendo el acceso a la salud según la <strong>Ley Nacional 26.657</strong>.</p>
-    <p>Este sistema permite a los profesionales del equipo de salud acompañar tu proceso de forma voluntaria y digital, generando datos que ayudan a mejorar las políticas públicas de tu barrio.</p>
+    <p>Este sistema permite a los profesionales del equipo de salud acompañar tu proceso de forma voluntaria, generando datos que ayudan a mejorar las políticas públicas territoriales.</p>
     <button onclick="mostrarConsentimiento()">PARTICIPAR DEL SEGUIMIENTO</button>
 </section>
 
-<!-- PASO 2: CONSENTIMIENTO -->
 <section id="consentimiento" class="hidden" style="border-left-color: var(--health-green);">
     <div class="badge" style="background: var(--unla-blue);">Marco Ético</div>
     <h2>Consentimiento Informado</h2>
-    <p>La participación en este dispositivo es <strong>totalmente voluntaria</strong>. Tus respuestas son confidenciales y se utilizarán para mejorar tu seguimiento clínico y para fines de investigación de la Maestría en Salud Mental Comunitaria (UNLa).</p>
-    <p>Usted puede retirar su consentimiento en cualquier momento sin que esto afecte su atención en el equipo de salud.</p>
-    <a href="consentimiento-informado.pdf" target="_blank" style="display: block; margin-bottom: 20px; color: var(--unla-blue); font-weight: bold;">Leer documento completo (PDF)</a>
+    <p>La participación es <strong>voluntaria</strong>. Tus respuestas se utilizarán para mejorar tu seguimiento clínico y para fines de investigación de la Maestría en Salud Mental Comunitaria (UNLa).</p>
+    <p>Usted puede retirar su participación en cualquier momento sin que esto afecte su atención habitual.</p>
     <button onclick="mostrarFormulario()" style="background-color: var(--health-green);">ACEPTO LOS TÉRMINOS Y CONTINUAR</button>
 </section>
 
-<!-- PASO 3: FORMULARIO -->
 <section id="formulario" class="hidden" style="border-left-color: var(--bonaparte-blue);">
     <div class="badge" style="background: var(--bonaparte-blue);">Seguimiento Digital</div>
     <h2>Registro de Bienestar Semanal</h2>
-    <p>Complete los campos para que el equipo de salud pueda realizar el seguimiento de su proceso:</p>
     
-    <iframe src="https://docs.google.com">Cargando…</iframe>
+    <div class="iframe-container">
+        <!-- LINK DE TU NUEVO FORMULARIO ACTUALIZADO -->
+        <iframe src="https://docs.google.com">Cargando…</iframe>
+    </div>
 
     <div class="alert">
-        ⚠️ ATENCIÓN: Este dispositivo no es un servicio de emergencias. Si presentas una crisis o riesgo inmediato, comunícate con los servicios de emergencia o acude a la UPA 1 o al centro de salud más cercano.
+        ⚠️ ATENCIÓN: Si presentas una crisis o riesgo inmediato, comunícate con los servicios de emergencia o acude a la UPA 1 o al centro de salud más cercano.
     </div>
 </section>
 
 <footer>
     <strong>Alejandro Magotti</strong><br>
-    Sistematización de Datos para Políticas Públicas<br>
     UNLa - RISAM - Lomas de Zamora © 2026
 </footer>
 
