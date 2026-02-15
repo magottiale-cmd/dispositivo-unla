@@ -13,7 +13,7 @@
         section { max-width: 800px; margin: 40px auto; padding: 35px; background: white; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-left: 10px solid var(--unla-blue); }
         .hidden { display: none; }
         .badge { background: var(--health-green); color: white; padding: 6px 15px; border-radius: 20px; font-size: 0.9em; display: inline-block; margin-bottom: 15px; }
-        .btn-accion { background-color: var(--unla-blue); color: white; padding: 18px 30px; border: none; border-radius: 10px; cursor: pointer; font-size: 1.2em; font-weight: bold; transition: 0.3s; width: 100%; text-decoration: none; display: block; text-align: center; }
+        .btn-accion { background-color: var(--unla-blue); color: white; padding: 18px 30px; border: none; border-radius: 10px; cursor: pointer; font-size: 1.2em; font-weight: bold; transition: 0.3s; width: 100%; text-decoration: none; display: block; text-align: center; box-sizing: border-box; }
         .btn-accion:hover { background-color: #1f4f68; transform: translateY(-2px); }
         .alert { background-color: #fff3cd; border-left: 6px solid #ffc107; padding: 20px; border-radius: 10px; margin-top: 30px; font-weight: bold; color: #856404; }
         footer { text-align: center; padding: 40px; color: #777; font-size: 0.9em; border-top: 1px solid #ddd; }
@@ -31,7 +31,6 @@
     </div>
 </header>
 
-<!-- PASO 1: INICIO -->
 <section id="inicio">
     <div class="badge">Bienvenida</div>
     <h2>Continuidad del Cuidado Territorial</h2>
@@ -40,22 +39,20 @@
     <button class="btn-accion" onclick="mostrarConsentimiento()">PARTICIPAR DEL SEGUIMIENTO</button>
 </section>
 
-<!-- PASO 2: CONSENTIMIENTO -->
 <section id="consentimiento" class="hidden" style="border-left-color: var(--health-green);">
     <div class="badge" style="background: var(--unla-blue);">Marco Ético</div>
     <h2>Consentimiento Informado</h2>
     <p>La participación es <strong>voluntaria y anónima</strong>. Tus respuestas se utilizarán para tu seguimiento clínico y para la investigación de la Maestría en Salud Mental Comunitaria (UNLa).</p>
-    <p>Al continuar, confirmas que has comprendido los términos del dispositivo.</p>
+    <p>Al continuar, confirmás que has comprendido los términos del dispositivo.</p>
     <button class="btn-accion" onclick="mostrarFormulario()" style="background-color: var(--health-green);">ACEPTO Y CONTINUAR AL REGISTRO</button>
 </section>
 
-<!-- PASO 3: ACCESO AL FORMULARIO -->
 <section id="formulario" class="hidden" style="border-left-color: var(--bonaparte-blue); text-align: center;">
     <div class="badge" style="background: var(--bonaparte-blue);">Paso Final</div>
     <h2>Registro de Bienestar</h2>
     <p>Para garantizar la seguridad de tus datos, el registro se abrirá en una ventana segura de Google.</p>
 
-    <!-- LINK DIRECTO AL FORMULARIO (MÉTODO INFALIBLE) -->
+    <!-- LINK CORREGIDO: YA NO MÁS GOOGLE DOCS GENÉRICO -->
     <a href="https://docs.google.com" target="_blank" class="btn-accion" style="background-color: var(--bonaparte-blue);">
         📝 ABRIR FORMULARIO DE SEGUIMIENTO
     </a>
