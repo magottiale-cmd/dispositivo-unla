@@ -9,48 +9,56 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    padding: 0;
     background-color: #f4f6f8;
     color: #333;
 }
 
 header {
-    background-color: #2c6e91;
+    background: linear-gradient(135deg, #2c6e91, #1f4f68);
     color: white;
-    padding: 30px 20px;
+    padding: 40px 20px;
     text-align: center;
 }
 
 section {
-    max-width: 900px;
+    max-width: 850px;
     margin: 40px auto;
-    padding: 20px;
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
 }
 
 h1, h2 {
     margin-bottom: 15px;
 }
 
-.card {
-    background: white;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    margin-bottom: 25px;
-}
-
 button {
     background-color: #2c6e91;
     color: white;
-    padding: 12px 20px;
+    padding: 12px 22px;
     border: none;
     border-radius: 6px;
     cursor: pointer;
     font-size: 16px;
+    margin-top: 10px;
 }
 
 button:hover {
     background-color: #1f4f68;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.hidden {
+    display: none;
 }
 
 .alert {
@@ -58,11 +66,20 @@ button:hover {
     border-left: 6px solid #ffc107;
     padding: 15px;
     border-radius: 6px;
+    margin-top: 20px;
+}
+
+.success {
+    background-color: #d4edda;
+    border-left: 6px solid #28a745;
+    padding: 15px;
+    border-radius: 6px;
+    margin-top: 20px;
 }
 
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 25px;
     font-size: 0.9em;
     color: #777;
 }
@@ -75,137 +92,131 @@ footer {
     <h1>AcompañarteSM</h1>
     <p>Dispositivo Digital de Soporte Comunitario en Salud Mental</p>
     <p><strong>Alejandro Magotti</strong><br>
-    Especialista en Salud Mental (RISAM)<br>
-    Maestría en Salud Mental Comunitaria – UNLa</p>
+    RISAM | Maestría en Salud Mental Comunitaria – UNLa</p>
 </header>
 
-<section>
-
-<div class="card">
+<!-- INTRO -->
+<section id="inicio">
 <h2>¿Qué es AcompañarteSM?</h2>
 <p>
-AcompañarteSM es un dispositivo digital de soporte comunitario orientado a fortalecer la continuidad del cuidado en personas adultas que hayan consultado por situaciones de malestar emocional o crisis en salud mental.
+AcompañarteSM es un dispositivo digital de soporte comunitario orientado a fortalecer la continuidad del cuidado en personas que hayan atravesado situaciones de malestar emocional o crisis en salud mental.
 </p>
 
 <p>
-Este espacio no reemplaza la atención profesional ni constituye un servicio de urgencias. Su finalidad es ofrecer un seguimiento voluntario y periódico que favorezca el acompañamiento y el acceso oportuno a la red de cuidado.
-</p>
-</div>
-
-<div class="card">
-<h2>¿Cómo funciona?</h2>
-<p>
-A través de un breve registro semanal, la persona puede informar cómo se encuentra respecto a:
-</p>
-<ul>
-<li>Descanso y sueño</li>
-<li>Apetito y alimentación</li>
-<li>Adherencia a medicación</li>
-<li>Estado emocional</li>
-<li>Conocimiento de red de apoyo ante crisis</li>
-</ul>
-
-<p>
-La información se utiliza de manera anónima con fines académicos y de mejora del dispositivo.
-</p>
-</div>
-
-<div class="card">
-<h2>Participar</h2>
-<p>
-Si aceptás participar del seguimiento semanal, primero deberás leer el consentimiento informado.
+Este espacio no reemplaza la atención profesional ni constituye un servicio de urgencias.
 </p>
 
-<a href="consentimiento.html">
-    <button>Leer consentimiento informado</button>
-</a>
-</div>
-
-<div class="card alert">
-<strong>Importante:</strong><br>
-Si estás atravesando una situación urgente, pensamientos de autolesión o riesgo inmediato,
-comunicate con el servicio de emergencias (911 en Argentina) o acudí al centro de salud más cercano.
-</div>
-
-<div class="card">
-<h2>Sobre el Proyecto</h2>
-<p>
-AcompañarteSM forma parte de un proyecto piloto académico en el marco de la Maestría en Salud Mental Comunitaria (UNLa), orientado a evaluar estrategias digitales de bajo costo para fortalecer el primer nivel de atención.
-</p>
-</div>
-
+<button onclick="mostrarConsentimiento()">Participar del seguimiento</button>
 </section>
 
-<footer>
-Proyecto piloto académico – 2026<br>
-AcompañarteSM
-</footer>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Consentimiento - AcompañarteSM</title>
-
-<style>
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f6f8;
-    margin: 0;
-    padding: 20px;
-}
-
-.container {
-    max-width: 800px;
-    margin: auto;
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-}
-
-button {
-    background-color: #2c6e91;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    margin-top: 20px;
-}
-</style>
-</head>
-
-<body>
-
-<div class="container">
-
-<h1>Consentimiento Informado</h1>
-
-<p>
-AcompañarteSM es un dispositivo piloto académico orientado a fortalecer la continuidad del cuidado en salud mental.
-</p>
-
+<!-- CONSENTIMIENTO -->
+<section id="consentimiento" class="hidden">
+<h2>Consentimiento Informado</h2>
 <p>
 La participación es voluntaria. La información será registrada de manera anónima mediante un código asignado al participante y utilizada exclusivamente con fines académicos.
 </p>
 
 <p>
-Este dispositivo no reemplaza la atención profesional ni constituye un servicio de emergencia.
+Este dispositivo no reemplaza la atención profesional.
 </p>
 
-<p>
-Al continuar, usted declara haber leído y comprendido esta información y acepta participar voluntariamente.
-</p>
+<button onclick="mostrarFormulario()">Acepto y continuar</button>
+</section>
 
-<a href="seguimiento.html">
-<button>Acepto y deseo continuar</button>
-</a>
+<!-- FORMULARIO -->
+<section id="formulario" class="hidden">
+<h2>Seguimiento Semanal</h2>
 
+<form id="seguimientoForm">
+
+<label>Código de participante:</label>
+<input type="text" name="codigo" required>
+
+<label>¿Cómo fue su descanso esta semana?</label>
+<select name="sueno">
+<option value="Bueno">Bueno</option>
+<option value="Regular">Regular</option>
+<option value="Malo">Malo</option>
+</select>
+
+<label>¿Tuvo apetito adecuado?</label>
+<select name="apetito">
+<option value="Si">Sí</option>
+<option value="No">No</option>
+</select>
+
+<label>¿Tomó la medicación según indicación?</label>
+<select name="medicacion">
+<option value="Si">Sí</option>
+<option value="No">No</option>
+<option value="No corresponde">No corresponde</option>
+</select>
+
+<label>¿Presentó angustia o ánimo deprimido?</label>
+<select name="animo">
+<option value="No">No</option>
+<option value="Leve">Leve</option>
+<option value="Moderado">Moderado</option>
+<option value="Intenso">Intenso</option>
+</select>
+
+<label>¿Sabe a quién llamar en caso de crisis?</label>
+<select name="red_apoyo">
+<option value="Si">Sí</option>
+<option value="No">No</option>
+</select>
+
+<button type="submit">Enviar seguimiento</button>
+</form>
+
+<div id="respuesta"></div>
+
+<div class="alert">
+Si presenta pensamientos de autolesión o riesgo inmediato, comuníquese con emergencias (911) o acuda al centro de salud más cercano.
 </div>
+
+</section>
+
+<footer>
+Proyecto piloto académico – AcompañarteSM 2026
+</footer>
+
+<script>
+
+function mostrarConsentimiento(){
+    document.getElementById("inicio").classList.add("hidden");
+    document.getElementById("consentimiento").classList.remove("hidden");
+}
+
+function mostrarFormulario(){
+    document.getElementById("consentimiento").classList.add("hidden");
+    document.getElementById("formulario").classList.remove("hidden");
+}
+
+const scriptURL = "PEGAR_AQUI_TU_URL_DE_GOOGLE_SCRIPT";
+
+document.getElementById("seguimientoForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const formData = new FormData(this);
+    const data = Object.fromEntries(formData.entries());
+
+    fetch(scriptURL, {
+        method: "POST",
+        body: JSON.stringify(data)
+    })
+    .then(response => {
+        document.getElementById("respuesta").innerHTML =
+        "<div class='success'>Seguimiento enviado correctamente.</div>";
+        document.getElementById("seguimientoForm").reset();
+    })
+    .catch(error => {
+        document.getElementById("respuesta").innerHTML =
+        "<div class='alert'>Error al enviar. Intente nuevamente.</div>";
+    });
+});
+
+</script>
 
 </body>
 </html>
