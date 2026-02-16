@@ -1,170 +1,89 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AcompañarteSM - Dispositivo UNLa</title>
+    <style>
+        :root { --unla-blue: #004a99; --health-green: #28a745; --bonaparte-blue: #00a1e4; --deep-blue: #1f4f68; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: #333; max-width: 1000px; margin: 0 auto; padding: 0; background-color: #f4f7f9; }
+        
+        header { background: linear-gradient(135deg, var(--unla-blue), var(--deep-blue)); color: white; padding: 60px 20px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.2); border-bottom: 5px solid var(--health-green); }
+        .nav-links { margin-top: 25px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+        .nav-links a { color: white; text-decoration: none; font-weight: bold; padding: 8px 16px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.3); font-size: 0.85em; transition: 0.3s; }
+        .nav-links a:hover { background: white; color: var(--unla-blue); }
 
-<title>AcompañarteSM – Seguimiento Digital en Salud Mental</title>
+        section { max-width: 850px; margin: 40px auto; padding: 40px; background: white; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-top: 8px solid var(--unla-blue); }
+        .hidden { display: none; }
+        
+        h2 { color: var(--unla-blue); border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 0; }
+        .badge { background: var(--health-green); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.85em; font-weight: bold; display: inline-block; margin-bottom: 15px; }
 
-<style>
+        .btn-primario { background-color: var(--unla-blue); color: white; padding: 20px 30px; border: none; border-radius: 12px; cursor: pointer; font-size: 1.2em; font-weight: bold; transition: 0.3s; width: 100%; text-decoration: none; display: block; text-align: center; box-sizing: border-box; }
+        .btn-primario:hover { background-color: var(--deep-blue); transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f8fb;
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    background-color: #2c6e91;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-header h1 {
-    margin: 0;
-}
-
-.container {
-    max-width: 900px;
-    margin: auto;
-    padding: 20px;
-}
-
-.card {
-    background: white;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
-}
-
-.button {
-    background-color: #2c6e91;
-    color: white;
-    padding: 15px 20px;
-    border: none;
-    border-radius: 8px;
-    font-size: 18px;
-    cursor: pointer;
-    width: 100%;
-}
-
-.button:hover {
-    background-color: #1f4f6a;
-}
-
-.form-container {
-    display: none;
-    margin-top: 20px;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    color: gray;
-    font-size: 14px;
-}
-
-</style>
-
+        .alert { background-color: #fff3cd; border-left: 6px solid #ffc107; padding: 20px; border-radius: 10px; margin-top: 30px; color: #856404; font-weight: 500; }
+        footer { text-align: center; padding: 40px; color: #666; font-size: 0.9em; border-top: 1px solid #ddd; background: white; margin-top: 50px; }
+    </style>
 </head>
 <body>
 
 <header>
-<h1>AcompañarteSM</h1>
-<p>Dispositivo Digital de Seguimiento en Salud Mental</p>
+    <h1>AcompañarteSM</h1>
+    <p>Dispositivo Digital de Soporte Comunitario en Salud Mental</p>
+    <div class="nav-links">
+        <a href="https://www.unla.edu.ar" target="_blank">Portal UNLa</a>
+        <a href="https://hospitalbonaparte.gob.ar" target="_blank">Hosp. Bonaparte</a>
+        <a href="https://www.lomasdezamora.gov.ar" target="_blank">Lomas de Zamora</a>
+    </div>
 </header>
 
-<div class="container">
+<!-- PASO 1: INICIO -->
+<section id="inicio">
+    <div class="badge">Salud Mental Comunitaria</div>
+    <h2>Continuidad del Cuidado</h2>
+    <p>Bienvenido a <strong>AcompañarteSM</strong>. Este es un espacio diseñado para fortalecer el acompañamiento territorial y facilitar el registro de tu bienestar de forma segura y voluntaria.</p>
+    <p>Bajo los principios de la <strong>Ley 26.657</strong>, trabajamos para que la tecnología sea un puente hacia una mejor atención en tu comunidad.</p>
+    <button class="btn-primario" onclick="irA('inicio', 'consentimiento')">INGRESAR AL DISPOSITIVO</button>
+</section>
 
-<div class="card">
+<!-- PASO 2: CONSENTIMIENTO -->
+<section id="consentimiento" class="hidden">
+    <div class="badge" style="background: var(--bonaparte-blue);">Marco Ético</div>
+    <h2>Consentimiento Informado</h2>
+    <p>Tu participación es <strong>voluntaria y confidencial</strong>. Los datos recolectados tienen fines de acompañamiento clínico y de investigación académica para la Maestría en Salud Mental Comunitaria (UNLa).</p>
+    <p>Al hacer clic en el botón, confirmás que aceptás participar de este dispositivo digital de seguimiento.</p>
+    <button class="btn-primario" onclick="irA('consentimiento', 'final')" style="background-color: var(--health-green);">ACEPTO Y CONTINUAR</button>
+</section>
 
-<h2>Bienvenido</h2>
+<!-- PASO 3: BOTÓN AL FORMULARIO -->
+<section id="final" class="hidden">
+    <div class="badge" style="background: var(--bonaparte-blue);">Paso Final</div>
+    <h2>Registro de Bienestar</h2>
+    <p>Para completar tu registro semanal, hacé clic en el botón de abajo. Se abrirá tu formulario personal en una ventana segura.</p>
 
-<p>
-Este dispositivo permite realizar un seguimiento semanal de tu bienestar.
-</p>
+    <!-- LINK CORREGIDO: PUNTA HACIA EL FORMULARIO PÚBLICO -->
+    <a href="https://docs.google.com" target="_blank" class="btn-primario">
+        📝 COMPLETAR MI REGISTRO
+    </a>
 
-<p>
-El objetivo es acompañarte, fortalecer el cuidado de tu salud mental y mejorar la continuidad del seguimiento clínico.
-</p>
-
-<p>
-La información es confidencial y forma parte de un proyecto académico en salud mental comunitaria.
-</p>
-
-</div>
-
-<div class="card">
-
-<h2>Consentimiento</h2>
-
-<p>
-Al completar el formulario usted acepta participar voluntariamente en el seguimiento digital de salud mental.
-</p>
-
-<p>
-No se solicitará su nombre completo. La información es confidencial y protegida.
-</p>
-
-<button class="button" onclick="mostrarFormulario()">
-Realizar seguimiento semanal
-</button>
-
-</div>
-
-<div class="card form-container" id="formulario">
-
-<h2>Formulario de Seguimiento</h2>
-
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfSI1Digm9h13CZq3j7UVg039CB_spQ4nQjWNsQkp8CeIZdEg/viewform?embedded=true"
-width="100%"
-height="1200"
-frameborder="0"
-marginheight="0"
-marginwidth="0">
-Cargando formulario…
-</iframe>
-
-</div>
-
-<div class="card">
-
-<h3>Importante</h3>
-
-<p>
-Este dispositivo no reemplaza la atención médica.
-</p>
-
-<p>
-Si necesita ayuda urgente, comuníquese con el servicio de salud o concurra a la guardia.
-</p>
-
-</div>
-
-</div>
+    <div class="alert">
+        ⚠️ IMPORTANTE: AcompañarteSM no es un servicio de urgencias. En caso de crisis o riesgo inmediato, por favor comunicate con los servicios de emergencia o acudí a la UPA 1 o al centro de salud más cercano.
+    </div>
+</section>
 
 <footer>
-
-AcompañarteSM – Dispositivo Digital en Salud Mental Comunitaria
-
+    <strong>Alejandro Magotti</strong><br>
+    Sistematización de Datos para Políticas Públicas<br>
+    UNLa - RISAM - Lomas de Zamora © 2026
 </footer>
 
 <script>
-
-function mostrarFormulario() {
-
-document.getElementById("formulario").style.display = "block";
-
-window.scrollTo({
-top: document.getElementById("formulario").offsetTop,
-behavior: "smooth"
-});
-
-}
-
+    function irA(idActual, idSiguiente) {
+        document.getElementById(idActual).classList.add("hidden");
+        document.getElementById(idSiguiente).classList.remove("hidden");
+        window.scrollTo(0, 0);
+    }
 </script>
 
 </body>
