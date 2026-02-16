@@ -4,139 +4,104 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>AcompañarteSM | Dispositivo Digital de Salud Mental</title>
+<title>AcompañarteSM - Dispositivo Digital de Salud Mental</title>
 
 <style>
 
 :root{
---unla-blue:#004a99;
---health-green:#28a745;
---deep-blue:#1f4f68;
---soft-bg:#f4f7f9;
+--azul:#004a99;
+--verde:#28a745;
+--azul2:#1f4f68;
+--celeste:#00a1e4;
 }
 
 body{
-font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+font-family:'Segoe UI',Tahoma,Verdana,sans-serif;
+background:#f4f7f9;
 margin:0;
-background:var(--soft-bg);
 color:#333;
 }
 
 header{
-background:linear-gradient(135deg,var(--unla-blue),var(--deep-blue));
+background:linear-gradient(135deg,var(--azul),var(--azul2));
 color:white;
 padding:60px 20px;
 text-align:center;
-border-bottom:5px solid var(--health-green);
-}
-
-header h1{
-margin:0;
-font-size:2.5em;
-}
-
-.nav-links{
-margin-top:20px;
-display:flex;
-justify-content:center;
-gap:10px;
-flex-wrap:wrap;
-}
-
-.nav-links a{
-color:white;
-text-decoration:none;
-padding:8px 15px;
-border-radius:6px;
-border:1px solid rgba(255,255,255,0.4);
-transition:0.3s;
-font-size:0.9em;
-}
-
-.nav-links a:hover{
-background:white;
-color:var(--unla-blue);
 }
 
 section{
+background:white;
 max-width:800px;
 margin:40px auto;
-background:white;
 padding:40px;
 border-radius:15px;
-box-shadow:0 5px 20px rgba(0,0,0,0.1);
-border-top:6px solid var(--unla-blue);
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+border-top:6px solid var(--azul);
 }
 
 .hidden{
 display:none;
 }
 
+h2{
+color:var(--azul);
+}
+
 .badge{
-background:var(--health-green);
+background:var(--verde);
 color:white;
 display:inline-block;
-padding:5px 15px;
+padding:6px 15px;
 border-radius:20px;
-font-size:0.8em;
 margin-bottom:15px;
 }
 
-h2{
-color:var(--unla-blue);
-margin-top:0;
-}
-
-.btn-primario{
-
-display:block;
-width:100%;
-padding:20px;
-margin-top:20px;
-
-background:var(--unla-blue);
+.btn{
+background:var(--azul);
 color:white;
-
-font-size:1.2em;
-font-weight:bold;
-
+padding:18px;
 border:none;
-border-radius:12px;
-
+border-radius:10px;
+font-size:18px;
+width:100%;
 cursor:pointer;
-text-align:center;
-text-decoration:none;
-
-transition:0.3s;
+margin-top:20px;
 }
 
-.btn-primario:hover{
-background:var(--deep-blue);
-transform:translateY(-2px);
+.btn:hover{
+background:var(--azul2);
 }
 
 .btn-verde{
-background:var(--health-green);
+background:var(--verde);
 }
 
 .btn-verde:hover{
-background:#218838;
+background:#1e7e34;
+}
+
+input{
+width:100%;
+padding:15px;
+font-size:18px;
+margin-top:15px;
+border-radius:8px;
+border:1px solid #ccc;
 }
 
 .alert{
-margin-top:30px;
-padding:20px;
 background:#fff3cd;
-border-left:6px solid #ffc107;
+padding:20px;
+margin-top:20px;
 border-radius:10px;
+border-left:5px solid orange;
 }
 
 footer{
-margin-top:40px;
-padding:30px;
 text-align:center;
+padding:30px;
 background:white;
-border-top:1px solid #ddd;
+margin-top:50px;
 }
 
 </style>
@@ -149,15 +114,9 @@ border-top:1px solid #ddd;
 
 <h1>AcompañarteSM</h1>
 
-<p>Dispositivo Digital de Seguimiento en Salud Mental Comunitaria</p>
+<p>Dispositivo Digital de Seguimiento en Salud Mental</p>
 
-<div class="nav-links">
-
-<a href="https://www.unla.edu.ar" target="_blank">UNLa</a>
-
-<a href="https://www.lomasdezamora.gov.ar" target="_blank">Municipio</a>
-
-</div>
+<p>UPA 1 - Lomas de Zamora | UNLa | RISAM</p>
 
 </header>
 
@@ -166,23 +125,23 @@ border-top:1px solid #ddd;
 
 <section id="inicio">
 
-<div class="badge">Bienestar y Acompañamiento</div>
+<div class="badge">Bienvenido</div>
 
-<h2>Bienvenido</h2>
+<h2>Continuidad del cuidado</h2>
 
 <p>
 
-Este dispositivo permite registrar tu bienestar y facilitar el acompañamiento por el equipo de salud mental.
+Este dispositivo permite registrar tu bienestar de forma segura, voluntaria y confidencial.
 
 </p>
 
 <p>
 
-Tu participación es voluntaria, confidencial y contribuye a mejorar la atención en tu comunidad.
+Forma parte de un proyecto de salud mental comunitaria desarrollado en la UPA 1.
 
 </p>
 
-<button class="btn-primario" onclick="irA('inicio','consentimiento')">
+<button class="btn" onclick="irA('inicio','consentimiento')">
 
 INGRESAR
 
@@ -195,23 +154,23 @@ INGRESAR
 
 <section id="consentimiento" class="hidden">
 
-<div class="badge">Consentimiento Informado</div>
+<div class="badge">Consentimiento informado</div>
 
-<h2>Participación Voluntaria</h2>
+<h2>Participación voluntaria</h2>
 
 <p>
 
-Este dispositivo forma parte de un proyecto académico y clínico de seguimiento en salud mental comunitaria.
+Tu participación es voluntaria y confidencial.
 
 </p>
 
 <p>
 
-Los datos son confidenciales y utilizados únicamente por el equipo de salud.
+Este dispositivo es parte de un proyecto académico y clínico para mejorar el seguimiento en salud mental.
 
 </p>
 
-<button class="btn-primario btn-verde" onclick="irA('consentimiento','registro')">
+<button class="btn btn-verde" onclick="irA('consentimiento','registro')">
 
 ACEPTO Y CONTINUAR
 
@@ -224,39 +183,35 @@ ACEPTO Y CONTINUAR
 
 <section id="registro" class="hidden">
 
-<div class="badge">Registro Semanal</div>
+<div class="badge">Identificación</div>
 
-<h2>Completar Seguimiento</h2>
+<h2>Ingresar código de paciente</h2>
 
 <p>
 
-Hacé clic en el botón para completar tu registro.
+Ingresá el código proporcionado por el equipo de salud.
+
+Ejemplo: PAC-001
 
 </p>
 
-
-<!-- BOTÓN CORREGIDO -->
-
-<a
-
-href="https://docs.google.com/forms/d/1wuluUZ1Z4n8uAohB1LnzTfjDYbk5l85oenvIqFUdyFA/viewform"
-
-target="_blank"
-
-class="btn-primario"
-
+<input
+type="text"
+id="codigoPaciente"
+placeholder="Ej: PAC-001"
 >
 
-COMPLETAR REGISTRO
+<button class="btn btn-verde" onclick="abrirFormulario()">
 
-</a>
+CONTINUAR AL REGISTRO
 
+</button>
 
 <div class="alert">
 
-Este dispositivo no reemplaza la atención profesional.
+Este sistema no reemplaza la atención médica.
 
-En caso de urgencia, acudí a la UPA o servicio de emergencias.
+En caso de urgencia acudir a la UPA o llamar a emergencias.
 
 </div>
 
@@ -267,11 +222,9 @@ En caso de urgencia, acudí a la UPA o servicio de emergencias.
 
 <strong>AcompañarteSM</strong><br>
 
-Dispositivo Digital de Salud Mental Comunitaria<br>
+Proyecto UNLa - Salud Mental Comunitaria<br>
 
-UNLa – UPA 1 – Lomas de Zamora<br>
-
-2026
+Alejandro Magotti © 2026
 
 </footer>
 
@@ -285,6 +238,29 @@ document.getElementById(actual).classList.add("hidden");
 document.getElementById(siguiente).classList.remove("hidden");
 
 window.scrollTo(0,0);
+
+}
+
+
+function abrirFormulario(){
+
+let codigo=document.getElementById("codigoPaciente").value.trim();
+
+if(codigo===""){
+
+alert("Ingresá tu código");
+
+return;
+
+}
+
+codigo=codigo.toUpperCase();
+
+
+let url="https://docs.google.com/forms/d/e/1FAIpQLSfSI1Digm9h13CZq3j7UVg039CB_spQ4nQjWNsQkp8CeIZdEg/viewform?entry.1960790416="+encodeURIComponent(codigo);
+
+
+window.open(url,"_blank");
 
 }
 
