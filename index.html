@@ -1,90 +1,295 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AcompañarteSM - Dispositivo UNLa</title>
-    <style>
-        :root { --unla-blue: #004a99; --health-green: #28a745; --bonaparte-blue: #00a1e4; --deep-blue: #1f4f68; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: #333; max-width: 1000px; margin: 0 auto; padding: 0; background-color: #f4f7f9; }
-        
-        header { background: linear-gradient(135deg, var(--unla-blue), var(--deep-blue)); color: white; padding: 60px 20px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.2); border-bottom: 5px solid var(--health-green); }
-        .nav-links { margin-top: 25px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
-        .nav-links a { color: white; text-decoration: none; font-weight: bold; padding: 8px 16px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.3); font-size: 0.85em; transition: 0.3s; }
-        .nav-links a:hover { background: white; color: var(--unla-blue); }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        section { max-width: 850px; margin: 40px auto; padding: 40px; background: white; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-top: 8px solid var(--unla-blue); }
-        .hidden { display: none; }
-        
-        h2 { color: var(--unla-blue); border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 0; }
-        .badge { background: var(--health-green); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.85em; font-weight: bold; display: inline-block; margin-bottom: 15px; }
+<title>AcompañarteSM | Dispositivo Digital de Salud Mental</title>
 
-        .btn-primario { background-color: var(--unla-blue); color: white; padding: 20px 30px; border: none; border-radius: 12px; cursor: pointer; font-size: 1.2em; font-weight: bold; transition: 0.3s; width: 100%; text-decoration: none; display: block; text-align: center; box-sizing: border-box; }
-        .btn-primario:hover { background-color: var(--deep-blue); transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+<style>
 
-        .alert { background-color: #fff3cd; border-left: 6px solid #ffc107; padding: 20px; border-radius: 10px; margin-top: 30px; color: #856404; font-weight: 500; }
-        footer { text-align: center; padding: 40px; color: #666; font-size: 0.9em; border-top: 1px solid #ddd; background: white; margin-top: 50px; }
-    </style>
+:root{
+--unla-blue:#004a99;
+--health-green:#28a745;
+--deep-blue:#1f4f68;
+--soft-bg:#f4f7f9;
+}
+
+body{
+font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+margin:0;
+background:var(--soft-bg);
+color:#333;
+}
+
+header{
+background:linear-gradient(135deg,var(--unla-blue),var(--deep-blue));
+color:white;
+padding:60px 20px;
+text-align:center;
+border-bottom:5px solid var(--health-green);
+}
+
+header h1{
+margin:0;
+font-size:2.5em;
+}
+
+.nav-links{
+margin-top:20px;
+display:flex;
+justify-content:center;
+gap:10px;
+flex-wrap:wrap;
+}
+
+.nav-links a{
+color:white;
+text-decoration:none;
+padding:8px 15px;
+border-radius:6px;
+border:1px solid rgba(255,255,255,0.4);
+transition:0.3s;
+font-size:0.9em;
+}
+
+.nav-links a:hover{
+background:white;
+color:var(--unla-blue);
+}
+
+section{
+max-width:800px;
+margin:40px auto;
+background:white;
+padding:40px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+border-top:6px solid var(--unla-blue);
+}
+
+.hidden{
+display:none;
+}
+
+.badge{
+background:var(--health-green);
+color:white;
+display:inline-block;
+padding:5px 15px;
+border-radius:20px;
+font-size:0.8em;
+margin-bottom:15px;
+}
+
+h2{
+color:var(--unla-blue);
+margin-top:0;
+}
+
+.btn-primario{
+
+display:block;
+width:100%;
+padding:20px;
+margin-top:20px;
+
+background:var(--unla-blue);
+color:white;
+
+font-size:1.2em;
+font-weight:bold;
+
+border:none;
+border-radius:12px;
+
+cursor:pointer;
+text-align:center;
+text-decoration:none;
+
+transition:0.3s;
+}
+
+.btn-primario:hover{
+background:var(--deep-blue);
+transform:translateY(-2px);
+}
+
+.btn-verde{
+background:var(--health-green);
+}
+
+.btn-verde:hover{
+background:#218838;
+}
+
+.alert{
+margin-top:30px;
+padding:20px;
+background:#fff3cd;
+border-left:6px solid #ffc107;
+border-radius:10px;
+}
+
+footer{
+margin-top:40px;
+padding:30px;
+text-align:center;
+background:white;
+border-top:1px solid #ddd;
+}
+
+</style>
+
 </head>
+
 <body>
 
 <header>
-    <h1>AcompañarteSM</h1>
-    <p>Dispositivo Digital de Soporte Comunitario en Salud Mental</p>
-    <div class="nav-links">
-        <a href="https://www.unla.edu.ar" target="_blank">Portal UNLa</a>
-        <a href="https://hospitalbonaparte.gob.ar" target="_blank">Hosp. Bonaparte</a>
-        <a href="https://www.lomasdezamora.gov.ar" target="_blank">Lomas de Zamora</a>
-    </div>
+
+<h1>AcompañarteSM</h1>
+
+<p>Dispositivo Digital de Seguimiento en Salud Mental Comunitaria</p>
+
+<div class="nav-links">
+
+<a href="https://www.unla.edu.ar" target="_blank">UNLa</a>
+
+<a href="https://www.lomasdezamora.gov.ar" target="_blank">Municipio</a>
+
+</div>
+
 </header>
 
-<!-- PASO 1: INICIO -->
+
+<!-- INICIO -->
+
 <section id="inicio">
-    <div class="badge">Salud Mental Comunitaria</div>
-    <h2>Continuidad del Cuidado</h2>
-    <p>Bienvenido a <strong>AcompañarteSM</strong>. Este es un espacio diseñado para fortalecer el acompañamiento territorial y facilitar el registro de tu bienestar de forma segura y voluntaria.</p>
-    <p>Bajo los principios de la <strong>Ley 26.657</strong>, trabajamos para que la tecnología sea un puente hacia una mejor atención en tu comunidad.</p>
-    <button class="btn-primario" onclick="irA('inicio', 'consentimiento')">INGRESAR AL DISPOSITIVO</button>
+
+<div class="badge">Bienestar y Acompañamiento</div>
+
+<h2>Bienvenido</h2>
+
+<p>
+
+Este dispositivo permite registrar tu bienestar y facilitar el acompañamiento por el equipo de salud mental.
+
+</p>
+
+<p>
+
+Tu participación es voluntaria, confidencial y contribuye a mejorar la atención en tu comunidad.
+
+</p>
+
+<button class="btn-primario" onclick="irA('inicio','consentimiento')">
+
+INGRESAR
+
+</button>
+
 </section>
 
-<!-- PASO 2: CONSENTIMIENTO -->
+
+<!-- CONSENTIMIENTO -->
+
 <section id="consentimiento" class="hidden">
-    <div class="badge" style="background: var(--bonaparte-blue);">Marco Ético</div>
-    <h2>Consentimiento Informado</h2>
-    <p>Tu participación es <strong>voluntaria y confidencial</strong>. Los datos recolectados tienen fines de acompañamiento clínico y de investigación académica para la Maestría en Salud Mental Comunitaria (UNLa).</p>
-    <p>Al hacer clic en el botón, confirmás que aceptás participar de este dispositivo digital de seguimiento.</p>
-    <button class="btn-primario" onclick="irA('consentimiento', 'final')" style="background-color: var(--health-green);">ACEPTO Y CONTINUAR</button>
+
+<div class="badge">Consentimiento Informado</div>
+
+<h2>Participación Voluntaria</h2>
+
+<p>
+
+Este dispositivo forma parte de un proyecto académico y clínico de seguimiento en salud mental comunitaria.
+
+</p>
+
+<p>
+
+Los datos son confidenciales y utilizados únicamente por el equipo de salud.
+
+</p>
+
+<button class="btn-primario btn-verde" onclick="irA('consentimiento','registro')">
+
+ACEPTO Y CONTINUAR
+
+</button>
+
 </section>
 
-<!-- PASO 3: BOTÓN AL FORMULARIO -->
-<section id="final" class="hidden">
-    <div class="badge" style="background: var(--bonaparte-blue);">Paso Final</div>
-    <h2>Registro de Bienestar</h2>
-    <p>Para completar tu registro semanal, hacé clic en el botón de abajo. Se abrirá tu formulario personal en una ventana segura.</p>
 
-    <!-- LINK BLINDADO: DIRECTO A VIEWFORM -->
-    <a href="https://docs.google.com" target="_blank" class="btn-primario">
-        📝 COMPLETAR MI REGISTRO
-    </a>
+<!-- REGISTRO -->
 
-    <div class="alert">
-        ⚠️ IMPORTANTE: AcompañarteSM no es un servicio de urgencias. En caso de crisis o riesgo inmediato, por favor comunicate con los servicios de emergencia o acudí a la UPA 1 o al centro de salud más cercano.
-    </div>
+<section id="registro" class="hidden">
+
+<div class="badge">Registro Semanal</div>
+
+<h2>Completar Seguimiento</h2>
+
+<p>
+
+Hacé clic en el botón para completar tu registro.
+
+</p>
+
+
+<!-- BOTÓN CORREGIDO -->
+
+<a
+
+href="https://docs.google.com/forms/d/1wuluUZ1Z4n8uAohB1LnzTfjDYbk5l85oenvIqFUdyFA/viewform"
+
+target="_blank"
+
+class="btn-primario"
+
+>
+
+COMPLETAR REGISTRO
+
+</a>
+
+
+<div class="alert">
+
+Este dispositivo no reemplaza la atención profesional.
+
+En caso de urgencia, acudí a la UPA o servicio de emergencias.
+
+</div>
+
 </section>
+
 
 <footer>
-    <strong>Alejandro Magotti</strong><br>
-    Sistematización de Datos para Políticas Públicas<br>
-    UNLa - RISAM - Lomas de Zamora © 2026
+
+<strong>AcompañarteSM</strong><br>
+
+Dispositivo Digital de Salud Mental Comunitaria<br>
+
+UNLa – UPA 1 – Lomas de Zamora<br>
+
+2026
+
 </footer>
 
+
 <script>
-    function irA(idActual, idSiguiente) {
-        document.getElementById(idActual).classList.add("hidden");
-        document.getElementById(idSiguiente).classList.remove("hidden");
-        window.scrollTo(0, 0);
-    }
+
+function irA(actual,siguiente){
+
+document.getElementById(actual).classList.add("hidden");
+
+document.getElementById(siguiente).classList.remove("hidden");
+
+window.scrollTo(0,0);
+
+}
+
 </script>
+
 
 </body>
 </html>
